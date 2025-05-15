@@ -25,8 +25,8 @@ export default function AboutSection() {
         <div className="mt-12 grid gap-8 md:grid-cols-2 items-center">
           <div className="relative overflow-hidden rounded-xl">
             <Image
-              src="/placeholder.svg?height=800&width=600&query=modern electricity meter manufacturing facility in Nigeria with workers"
-              alt="Unistar Manufacturing Facility"
+              src="/images/manufacturing-facility.png"
+              alt="Unistar Manufacturing Facility with meter testing equipment"
               width={800}
               height={600}
               className="object-cover rounded-xl"

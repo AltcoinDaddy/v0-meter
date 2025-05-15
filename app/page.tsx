@@ -167,7 +167,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white"
+                  className="px-8 border-white text-primary hover:text-primary hover:bg-white"
                 >
                   View Products
                 </Button>

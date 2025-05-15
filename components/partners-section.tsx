@@ -1,8 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
 
 export default function PartnersSection() {
   return (
@@ -27,12 +24,11 @@ export default function PartnersSection() {
               local manufacturing capabilities, ensuring our meters meet international standards while being tailored
               for the Nigerian market.
             </p>
-            
           </div>
           <div className="flex justify-center">
             <div className="relative overflow-hidden rounded-xl border bg-white p-8 shadow-sm transition-all hover:shadow-md">
               <Image
-                src="/placeholder.svg?height=400&width=200&query=electricity metering technology company logo on white background"
+                src="/placeholder-o89ru.png"
                 alt="Technology Partnership"
                 width={400}
                 height={200}
@@ -54,33 +50,35 @@ export default function PartnersSection() {
               {
                 name: "EKEDC",
                 description: "Eko Electricity Distribution Company",
-                image: "/placeholder.svg?height=160&width=80&query=EKEDC electricity distribution company Nigeria logo",
+                image: "/images/Partners/ekedc-logo.png",
               },
               {
                 name: "AEDC",
                 description: "Abuja Electricity Distribution Company",
-                image: "/placeholder.svg?height=160&width=80&query=AEDC electricity distribution company Nigeria logo",
+                image: "/images/Partners/aedc-logo.png",
               },
               {
                 name: "IBEDC",
                 description: "Ibadan Electricity Distribution Company",
-                image: "/placeholder.svg?height=160&width=80&query=IBEDC electricity distribution company Nigeria logo",
+                image: "/images/Partners/ibedc-logo.png",
               },
               {
                 name: "PHED",
                 description: "Port Harcourt Electricity Distribution Company",
-                image: "/placeholder.svg?height=160&width=80&query=PHED electricity distribution company Nigeria logo",
+                image: "/images/Partners/phed-logo.png",
               },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <Image
-                    src={partner.image || "/placeholder.svg"}
-                    alt={`${partner.name} Logo`}
-                    width={200}
-                    height={120}
-                    className="h-16 w-auto object-contain mb-4"
-                  />
+                  <div className="h-20 flex items-center justify-center mb-4">
+                    <Image
+                      src={partner.image || "/placeholder.svg"}
+                      alt={`${partner.name} Logo`}
+                      width={200}
+                      height={120}
+                      className="max-h-20 w-auto object-contain"
+                    />
+                  </div>
                   <h4 className="font-semibold">{partner.name}</h4>
                   <p className="text-xs text-gray-500">{partner.description}</p>
                 </CardContent>
@@ -97,28 +95,30 @@ export default function PartnersSection() {
               {
                 name: "NERC",
                 description: "Nigerian Electricity Regulatory Commission",
-                image: "/placeholder.svg?height=120&width=200&query=NERC logo Nigeria regulatory commission",
+                image: "/images/Partners/nerc-logo.png",
               },
               {
                 name: "SON",
                 description: "Standards Organisation of Nigeria",
-                image: "/placeholder.svg?height=120&width=200&query=SON logo Standards Organisation of Nigeria",
+                image: "/images/Partners/son-logo.png",
               },
               {
                 name: "FMoP",
                 description: "Federal Ministry of Power",
-                image: "/placeholder.svg?height=120&width=200&query=Federal Ministry of Power logo Nigeria",
+                image: "/images/Partners/fmop-logo.png",
               },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <Image
-                    src={partner.image || "/placeholder.svg"}
-                    alt={`${partner.name} Logo`}
-                    width={200}
-                    height={120}
-                    className="h-16 w-auto object-contain mb-4"
-                  />
+                  <div className="h-20 flex items-center justify-center mb-4">
+                    <Image
+                      src={partner.image || "/placeholder.svg"}
+                      alt={`${partner.name} Logo`}
+                      width={200}
+                      height={120}
+                      className="max-h-20 w-auto object-contain"
+                    />
+                  </div>
                   <h4 className="font-semibold">{partner.name}</h4>
                   <p className="text-xs text-gray-500">{partner.description}</p>
                 </CardContent>
