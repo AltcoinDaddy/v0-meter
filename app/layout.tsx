@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import Script from "next/script"
-import { EnvDebug } from "@/components/env-debug"
+import { DebugImage } from "@/components/debug-image"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -62,7 +62,8 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          {process.env.NODE_ENV !== "production" && <EnvDebug />}
+          {/* Add the debug component in development and preview */}
+          {(process.env.NODE_ENV !== "production" || process.env.VERCEL_ENV === "preview") && <DebugImage />}
         </ThemeProvider>
       </body>
     </html>

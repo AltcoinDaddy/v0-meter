@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -12,6 +12,7 @@ import { ChevronDown, Menu } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [imgError, setImgError] = useState(false)
 
   // Function to handle smooth scrolling to sections
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -23,20 +24,37 @@ export default function Navbar() {
     if (isOpen) setIsOpen(false)
   }
 
+  // Log image path for debugging
+  useEffect(() => {
+    console.log("Logo path:", "/images/unistar-logo.jpeg")
+  }, [])
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/images/unistar-logo.jpeg"
-              alt="Unistar Logo"
-              width={40}
-              height={40}
-              className="h-8 w-auto rounded-full"
-              unoptimized // Add this to bypass image optimization for small logos
-              priority // Add this for above-the-fold images
-            />
+            {imgError ? (
+              // Fallback to a div with text if image fails to load
+              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">
+                U
+              </div>
+            ) : (
+              // Try with unoptimized image first
+              <Image
+                src="/images/unistar-logo.jpeg"
+                alt="Unistar Logo"
+                width={40}
+                height={40}
+                className="h-8 w-auto rounded-full"
+                unoptimized
+                priority
+                onError={() => {
+                  console.error("Logo image failed to load")
+                  setImgError(true)
+                }}
+              />
+            )}
             <span className="hidden font-bold sm:inline-block">Unistar Hi-Tech Systems</span>
           </Link>
         </div>
