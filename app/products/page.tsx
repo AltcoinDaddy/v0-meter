@@ -51,16 +51,7 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <img
-                    src="/images/meter.png"
-                    alt="Single-Phase Meters"
-                    className="object-cover w-full h-full"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement
-                      target.onerror = null
-                      target.src = "/placeholder.svg?text=Single-Phase+Meter"
-                    }}
-                  />
+                  <img src="/images/meter.png" alt="Single-Phase Meters" className="object-cover w-full h-full" />
                 </div>
               </CardHeader>
               <CardContent className="p-6">
@@ -83,11 +74,6 @@ export default function ProductsPage() {
                     src="/images/three-phase-meter.png"
                     alt="Three-Phase Meters"
                     className="object-cover w-full h-full"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement
-                      target.onerror = null
-                      target.src = "/placeholder.svg?text=Three-Phase+Meter"
-                    }}
                   />
                 </div>
               </CardHeader>

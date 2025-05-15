@@ -4,6 +4,8 @@ import { Button, type ButtonProps } from "@/components/ui/button"
 import QuoteRequestModal from "@/components/quote-request-modal"
 import { useState } from "react"
 
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : ""
+
 interface QuoteRequestButtonProps extends ButtonProps {
   variant?: "default" | "outline" | "secondary"
   size?: "default" | "sm" | "lg" | "icon"

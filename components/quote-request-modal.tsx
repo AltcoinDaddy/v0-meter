@@ -20,6 +20,8 @@ import {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Loader2, CheckCircle2 } from "lucide-react"
 
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : ""
+
 interface QuoteRequestModalProps {
   trigger?: React.ReactNode
   open?: boolean
@@ -247,7 +249,7 @@ export default function QuoteRequestModal({
               <Label htmlFor="agreeToTerms" className="text-sm">
                 I agree to be contacted regarding my quote request and understand that my information will be processed
                 in accordance with the{" "}
-                <a href="/privacy-policy" className="text-primary hover:underline">
+                <a href={`${baseUrl}/privacy-policy`} className="text-primary hover:underline">
                   Privacy Policy
                 </a>
                 .
