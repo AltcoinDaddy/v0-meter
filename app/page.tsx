@@ -176,6 +176,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="mt-8 text-center">
+        <p>Test Image (HTML):</p>
+        <img src="/images/meter.png" alt="Test Image" style={{ width: "200px", height: "auto", margin: "0 auto" }} />
+      </div>
     </main>
   )
 }

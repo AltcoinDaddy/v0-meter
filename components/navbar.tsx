@@ -34,6 +34,8 @@ export default function Navbar() {
               width={40}
               height={40}
               className="h-8 w-auto rounded-full"
+              unoptimized // Add this to bypass image optimization for small logos
+              priority // Add this for above-the-fold images
             />
             <span className="hidden font-bold sm:inline-block">Unistar Hi-Tech Systems</span>
           </Link>
