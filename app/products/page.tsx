@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
@@ -52,12 +51,15 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <Image
+                  <img
                     src="/images/meter.png"
                     alt="Single-Phase Meters"
-                    width={300}
-                    height={300}
                     className="object-cover w-full h-full"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.onerror = null
+                      target.src = "/placeholder.svg?text=Single-Phase+Meter"
+                    }}
                   />
                 </div>
               </CardHeader>
@@ -77,12 +79,15 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <Image
-                    src="/images/three-phase-meter.jpeg"
+                  <img
+                    src="/images/three-phase-meter.png"
                     alt="Three-Phase Meters"
-                    width={300}
-                    height={300}
                     className="object-cover w-full h-full"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.onerror = null
+                      target.src = "/placeholder.svg?text=Three-Phase+Meter"
+                    }}
                   />
                 </div>
               </CardHeader>
@@ -102,11 +107,9 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <Image
-                    src="/placeholder.svg?key=4r6g2"
+                  <img
+                    src="/placeholder.svg?text=Split+Prepayment+Meters"
                     alt="Split Prepayment Meters"
-                    width={300}
-                    height={300}
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -127,11 +130,9 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <Image
-                    src="/placeholder.svg?key=xvob7"
+                  <img
+                    src="/placeholder.svg?text=Smart+Meters"
                     alt="Smart Meters"
-                    width={300}
-                    height={300}
                     className="object-cover w-full h-full"
                   />
                 </div>

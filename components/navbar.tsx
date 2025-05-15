@@ -2,17 +2,18 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown, Menu } from "lucide-react"
+import QuoteRequestModal from "@/components/quote-request-modal"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [imgError, setImgError] = useState(false)
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false)
 
   // Function to handle smooth scrolling to sections
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -23,11 +24,6 @@ export default function Navbar() {
     }
     if (isOpen) setIsOpen(false)
   }
-
-  // Log image path for debugging
-  useEffect(() => {
-    console.log("Logo path:", "/images/unistar-logo.jpeg")
-  }, [])
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -40,15 +36,11 @@ export default function Navbar() {
                 U
               </div>
             ) : (
-              // Try with unoptimized image first
-              <Image
-                src="/images/unistar-logo.jpeg"
+              // Use regular HTML img tag for better compatibility
+              <img
+                src="/images/unistar-logo.png"
                 alt="Unistar Logo"
-                width={40}
-                height={40}
                 className="h-8 w-auto rounded-full"
-                unoptimized
-                priority
                 onError={() => {
                   console.error("Logo image failed to load")
                   setImgError(true)
@@ -106,9 +98,9 @@ export default function Navbar() {
           </a>
         </nav>
         <div className="flex items-center gap-2 md:ml-auto">
-          <Link href="/contact" className="hidden md:block">
-            <Button>Request a Quote</Button>
-          </Link>
+          <div className="hidden md:block">
+            <Button onClick={() => setQuoteModalOpen(true)}>Request a Quote</Button>
+          </div>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden" aria-label="Toggle Menu">
@@ -171,16 +163,23 @@ export default function Navbar() {
                   Contact
                 </a>
 
-                <Link href="/contact" className="mt-4">
-                  <Button className="w-full" onClick={() => setIsOpen(false)}>
-                    Request a Quote
-                  </Button>
-                </Link>
+                <Button
+                  className="w-full mt-4"
+                  onClick={() => {
+                    setIsOpen(false)
+                    setQuoteModalOpen(true)
+                  }}
+                >
+                  Request a Quote
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
       </div>
+
+      {/* Quote Request Modal */}
+      <QuoteRequestModal open={quoteModalOpen} onOpenChange={setQuoteModalOpen} />
     </header>
   )
 }

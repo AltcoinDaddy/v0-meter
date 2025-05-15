@@ -7,9 +7,13 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['i.ibb.co'], // Add any external domains you're using
-    unoptimized: true, // Set to true to bypass image optimization - helps with preview environments
+    unoptimized: true, // Disable image optimization to avoid issues in preview
+    domains: ['v0.blob.com'], // Allow images from v0.blob.com
   },
+  // Ensure static assets are properly handled
+  assetPrefix: process.env.NODE_ENV === 'production' ? undefined : '',
+  // Disable strict mode for development to avoid double renders
+  reactStrictMode: false,
 }
 
 export default nextConfig

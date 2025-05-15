@@ -27,13 +27,7 @@ export default function PartnersSection() {
               local manufacturing capabilities, ensuring our meters meet international standards while being tailored
               for the Nigerian market.
             </p>
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <Link href="/partners">
-                <Button variant="outline" className="gap-1">
-                  Learn More <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            
           </div>
           <div className="flex justify-center">
             <div className="relative overflow-hidden rounded-xl border bg-white p-8 shadow-sm transition-all hover:shadow-md">

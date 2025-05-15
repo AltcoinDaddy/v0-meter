@@ -1,10 +1,12 @@
-import Image from "next/image"
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import QuoteRequestModal from "@/components/quote-request-modal"
 
 export default function HeroSection() {
-  // Get the deployment URL (will be empty in development)
-  const deploymentUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : ""
+  const [quoteModalOpen, setQuoteModalOpen] = useState(false)
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
@@ -26,40 +28,26 @@ export default function HeroSection() {
                   Explore Our Products
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="px-8">
-                  Request a Quote
-                </Button>
-              </Link>
+              <Button size="lg" variant="outline" className="px-8" onClick={() => setQuoteModalOpen(true)}>
+                Request a Quote
+              </Button>
             </div>
           </div>
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl bg-white p-6">
-              {/* Use a regular img tag with Vercel's Image Optimization API as fallback */}
-              {deploymentUrl ? (
-                <img
-                  src={`${deploymentUrl}/_next/image?url=%2Fimages%2Fmeter.png&w=800&q=75`}
-                  alt="Unistar Prepaid Electricity Meter with Keypad"
-                  className="object-contain h-full w-full"
-                />
-              ) : (
-                <Image
-                  src="/images/meter.png"
-                  alt="Unistar Prepaid Electricity Meter with Keypad"
-                  width={800}
-                  height={600}
-                  className="object-contain h-full w-full"
-                  priority
-                />
-              )}
+              {/* Use regular img tag for better compatibility */}
+              <img
+                src="/images/three-phase-meter.png"
+                alt="Unistar Three Phase Prepaid Electricity Meter"
+                className="object-contain h-full w-full"
+                style={{ maxHeight: "400px" }}
+              />
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
                 <p className="text-sm font-medium flex items-center whitespace-nowrap">
-                  <Image
+                  <img
                     src="/images/nigerian-flag-with-coa.png"
                     alt="Nigerian Flag with Coat of Arms"
-                    width={30}
-                    height={20}
-                    className="mr-2"
+                    className="h-5 w-auto mr-2"
                   />
                   Proudly Made in Nigeria
                 </p>
@@ -68,6 +56,9 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* Quote Request Modal */}
+      <QuoteRequestModal open={quoteModalOpen} onOpenChange={setQuoteModalOpen} />
     </section>
   )
 }

@@ -1,14 +1,20 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Check } from "lucide-react"
+import { useState } from "react"
 
 export default function FeaturedProducts() {
+  const [imgError, setImgError] = useState({
+    singlePhase: false,
+    threePhase: false,
+    commercial: false,
+  })
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
@@ -32,13 +38,18 @@ export default function FeaturedProducts() {
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/meter.png"
-                      alt="Prepaid Electricity Meter"
-                      width={400}
-                      height={400}
-                      className="object-contain transition-transform hover:scale-105 p-4"
-                    />
+                    {imgError.singlePhase ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4">
+                        <span className="text-gray-500">Single Phase Meter</span>
+                      </div>
+                    ) : (
+                      <img
+                        src="/images/meter.png"
+                        alt="Prepaid Electricity Meter"
+                        className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
+                        onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
+                      />
+                    )}
                     <Badge className="absolute top-4 right-4 bg-primary">Featured</Badge>
                   </div>
                 </CardHeader>
@@ -75,13 +86,18 @@ export default function FeaturedProducts() {
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/meter.png"
-                      alt="Prepaid Electricity Meter"
-                      width={400}
-                      height={400}
-                      className="object-contain transition-transform hover:scale-105 p-4"
-                    />
+                    {imgError.singlePhase ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4">
+                        <span className="text-gray-500">Split Prepayment Meter</span>
+                      </div>
+                    ) : (
+                      <img
+                        src="/images/meter.png"
+                        alt="Split Prepayment Meter"
+                        className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
+                        onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
+                      />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1 p-6">
@@ -117,13 +133,18 @@ export default function FeaturedProducts() {
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/meter.png"
-                      alt="Prepaid Electricity Meter"
-                      width={400}
-                      height={400}
-                      className="object-contain transition-transform hover:scale-105 p-4"
-                    />
+                    {imgError.singlePhase ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4">
+                        <span className="text-gray-500">Keypad Prepayment Meter</span>
+                      </div>
+                    ) : (
+                      <img
+                        src="/images/meter.png"
+                        alt="Keypad Prepayment Meter"
+                        className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
+                        onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
+                      />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1 p-6">
@@ -163,13 +184,18 @@ export default function FeaturedProducts() {
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/three-phase-meter.jpeg"
-                      alt="DTSY111 Three-Phase Prepaid Electricity Meter"
-                      width={400}
-                      height={400}
-                      className="object-contain transition-transform hover:scale-105 p-4"
-                    />
+                    {imgError.threePhase ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4">
+                        <span className="text-gray-500">DTSY111 Three-Phase Meter</span>
+                      </div>
+                    ) : (
+                      <img
+                        src="/images/three-phase-meter.png"
+                        alt="DTSY111 Three-Phase Prepaid Electricity Meter"
+                        className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
+                        onError={() => setImgError((prev) => ({ ...prev, threePhase: true }))}
+                      />
+                    )}
                     <Badge className="absolute top-4 right-4 bg-primary">Featured</Badge>
                   </div>
                 </CardHeader>
@@ -206,13 +232,18 @@ export default function FeaturedProducts() {
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
                   <div className="relative aspect-square overflow-hidden">
-                    <Image
-                      src="/images/three-phase-meter.jpeg"
-                      alt="Commercial/Industrial Three-Phase Meter"
-                      width={400}
-                      height={400}
-                      className="object-contain transition-transform hover:scale-105 p-4"
-                    />
+                    {imgError.commercial ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-100 p-4">
+                        <span className="text-gray-500">Commercial/Industrial Three-Phase Meter</span>
+                      </div>
+                    ) : (
+                      <img
+                        src="/images/three-phase-meter.png"
+                        alt="Commercial/Industrial Three-Phase Meter"
+                        className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
+                        onError={() => setImgError((prev) => ({ ...prev, commercial: true }))}
+                      />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent className="flex-1 p-6">
