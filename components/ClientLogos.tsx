@@ -1,6 +1,9 @@
-import Image from "next/image"
-
+// Modify the component to hide it for now
 export default function ClientLogos() {
+  // Return null to hide the component completely
+  return null
+
+  /* Original code preserved for later use
   return (
     <section className="w-full pt-4 pb-12 md:py-24 bg-white">
       <div className="container px-4 md:px-6">
@@ -17,7 +20,7 @@ export default function ClientLogos() {
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4 items-center justify-center mt-12">
           <div className="flex items-center justify-center p-4 grayscale transition-all hover:grayscale-0 hover:scale-105">
             <Image
-              src="/placeholder.svg?height=80&width=160&query=EKEDC logo electricity distribution company Nigeria"
+              src="/placeholder-fllhs.png"
               alt="EKEDC Logo"
               width={160}
               height={80}
@@ -26,7 +29,7 @@ export default function ClientLogos() {
           </div>
           <div className="flex items-center justify-center p-4 grayscale transition-all hover:grayscale-0 hover:scale-105">
             <Image
-              src="/placeholder.svg?height=80&width=160&query=AEDC logo electricity distribution company Nigeria"
+              src="/placeholder-dxrix.png"
               alt="AEDC Logo"
               width={160}
               height={80}
@@ -35,7 +38,7 @@ export default function ClientLogos() {
           </div>
           <div className="flex items-center justify-center p-4 grayscale transition-all hover:grayscale-0 hover:scale-105">
             <Image
-              src="/placeholder.svg?height=80&width=160&query=IBEDC logo electricity distribution company Nigeria"
+              src="/placeholder-opv65.png"
               alt="IBEDC Logo"
               width={160}
               height={80}
@@ -44,7 +47,7 @@ export default function ClientLogos() {
           </div>
           <div className="flex items-center justify-center p-4 grayscale transition-all hover:grayscale-0 hover:scale-105">
             <Image
-              src="/placeholder.svg?height=80&width=160&query=PHED logo electricity distribution company Nigeria"
+              src="/placeholder-ico1b.png"
               alt="PHED Logo"
               width={160}
               height={80}
@@ -53,7 +56,7 @@ export default function ClientLogos() {
           </div>
           <div className="flex items-center justify-center p-4 grayscale transition-all hover:grayscale-0 hover:scale-105">
             <Image
-              src="/placeholder.svg?height=80&width=160&query=KEDCO logo electricity distribution company Nigeria"
+              src="/placeholder-m19bk.png"
               alt="KEDCO Logo"
               width={160}
               height={80}
@@ -91,4 +94,5 @@ export default function ClientLogos() {
       </div>
     </section>
   )
+  */
 }

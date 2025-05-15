@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function PartnersSection() {
   return (
@@ -24,21 +24,6 @@ export default function PartnersSection() {
               local manufacturing capabilities, ensuring our meters meet international standards while being tailored
               for the Nigerian market.
             </p>
-          </div>
-          <div className="flex justify-center">
-            <div className="relative overflow-hidden rounded-xl border bg-white p-8 shadow-sm transition-all hover:shadow-md">
-              <Image
-                src="/placeholder-o89ru.png"
-                alt="Technology Partnership"
-                width={400}
-                height={200}
-                className="mx-auto object-contain"
-              />
-              <div className="mt-4 text-center">
-                <h4 className="font-semibold">SHENZHEN DONSUN Technology</h4>
-                <p className="text-sm text-gray-500">Global Metering Technology Provider</p>
-              </div>
-            </div>
           </div>
         </div>
 

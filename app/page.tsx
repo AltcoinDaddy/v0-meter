@@ -7,7 +7,7 @@ import HeroSection from "@/components/hero-section"
 import StatsSection from "@/components/stats-section"
 import FeaturedProducts from "@/components/featured-products"
 import NewsSection from "@/components/news-section"
-import ClientLogos from "@/components/client-logos"
+import ClientLogos from "@/components/ClientLogos"
 import PartnersSection from "@/components/partners-section"
 import ContactSection from "@/components/contact-section"
 import AboutSection from "@/components/about-section"
@@ -176,11 +176,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="mt-8 text-center">
-        <p>Test Image (HTML):</p>
-        <img src="/images/meter.png" alt="Test Image" style={{ width: "200px", height: "auto", margin: "0 auto" }} />
-      </div>
     </main>
   )
 }
