@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center">
               <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?key=yk9d3"
+                  src="https://i.ibb.co/bgpGP7wR/Assembly-Packing-Line-1.png"
                   alt="Unistar Hi-Tech Systems Headquarters"
                   width={800}
                   height={600}
@@ -311,7 +311,7 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?key=ldhy6"
+                src="https://i.ibb.co/9xjx5Z8/Trolley-1.png"
                 alt="Unistar Manufacturing Facility"
                 width={800}
                 height={600}
@@ -367,7 +367,7 @@ export default function AboutPage() {
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-4">
                   <Image
-                    src="/placeholder.svg?key=csr1"
+                    src="https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                     alt="Community Development"
                     width={400}
                     height={225}
@@ -385,7 +385,7 @@ export default function AboutPage() {
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-4">
                   <Image
-                    src="/placeholder.svg?key=csr2"
+                    src="https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                     alt="Environmental Sustainability"
                     width={400}
                     height={225}
@@ -403,7 +403,7 @@ export default function AboutPage() {
               <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
                 <div className="relative w-full aspect-video overflow-hidden rounded-lg mb-4">
                   <Image
-                    src="/placeholder.svg?key=csr3"
+                    src="https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                     alt="Skills Development"
                     width={400}
                     height={225}
@@ -441,15 +441,6 @@ export default function AboutPage() {
               <Link href="/contact">
                 <Button size="lg" variant="secondary" className="px-8">
                   Contact Us
-                </Button>
-              </Link>
-              <Link href="/careers">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white"
-                >
-                  Join Our Team
                 </Button>
               </Link>
             </div>

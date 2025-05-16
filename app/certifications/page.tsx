@@ -20,7 +20,7 @@ import {
   Loader2,
 } from "lucide-react"
 import JSZip from "jszip"
-import { saveAs } from "file-saver"
+import FileSaver from "file-saver" // Changed from named import to default import
 
 export default function CertificationsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -41,17 +41,17 @@ export default function CertificationsPage() {
       name: "STS Certification",
       images: [
         {
-          src: "/images/sts-membership-certificate.png",
+          src: "https://i.ibb.co/Wv6DdpMK/STS-MEMBERSHIP-CERTIFICATE-1.png",
           caption: "STS Association Membership Certificate",
           date: "July 16, 2016",
         },
         {
-          src: "/images/sts-certificate-single-phase.png",
+          src: "https://i.ibb.co/ycnVqy1V/STS-CERTIFICATE-UNISTAR-HI-TECH-METER-DDSY111-1.png",
           caption: "STS Certificate for Single Phase Meter (DDSY111)",
           date: "November 11, 2021",
         },
         {
-          src: "/images/sts-certificate-three-phase.png",
+          src: "https://i.ibb.co/93kPSBkd/image.png",
           caption: "STS Certificate for Three Phase Meter (DTSY111)",
           date: "November 11, 2021",
         },
@@ -65,7 +65,7 @@ export default function CertificationsPage() {
       name: "VAT Registration",
       images: [
         {
-          src: "/images/vat-certificate.png",
+          src: "https://i.ibb.co/Q7vrSwxQ/VAT-CERTIFICATE-1.png",
           caption: "Value Added Tax (VAT) Certificate of Registration",
           date: "May 19, 2009",
         },
@@ -79,11 +79,11 @@ export default function CertificationsPage() {
       name: "NERC Approval",
       images: [
         {
-          src: "/images/nerc-certificate.jpeg",
+          src: "https://i.ibb.co/3m3XCW0G/MANUFACTURER-jpg.jpg",
           caption: "NERC Manufacturing Approval Certificate",
         },
         {
-          src: "/images/nerc-no-objection.png",
+          src: "https://i.ibb.co/Z6KmVK24/NO-OBJECTION-MAP-1.png",
           caption: "NERC 'No Objection' Letter for Meter Asset Provider",
           date: "May 21, 2018",
         },
@@ -97,7 +97,7 @@ export default function CertificationsPage() {
       name: "SON Certification",
       images: [
         {
-          src: "/images/son-mancap-certificate.jpeg",
+          src: "https://i.ibb.co/vCbj8BVJ/MANCAP.jpg",
           caption: "Standards Organisation of Nigeria (SON) MANCAP Certificate",
         },
       ],
@@ -110,17 +110,17 @@ export default function CertificationsPage() {
       name: "Other Certifications",
       images: [
         {
-          src: "/images/assembler-certificate.jpeg",
+          src: "https://i.ibb.co/4RLbhDwM/Assember-certificate.jpg",
           caption: "Federal Ministry of Industry, Trade & Investment Assembler Certificate",
           date: "December 18, 2020",
         },
         {
-          src: "/images/nigeria-customs-recognition.png",
+          src: "https://i.ibb.co/sd4Srqpf/CC-1.png",
           caption: "Nigeria Customs Service Recognition as Manufacturer/Assembler of Prepaid Meters",
           date: "December 10, 2021",
         },
         {
-          src: "/images/finance-ministry-recognition.png",
+          src: "https://i.ibb.co/215QR84Z/FMF-1.png",
           caption: "Federal Ministry of Finance Recognition as Manufacturer/Assembler of Prepaid Meters",
           date: "November 9, 2021",
         },
@@ -133,17 +133,17 @@ export default function CertificationsPage() {
       name: "Other Certification",
       images: [
         {
-          src: "/images/assembler-certificate.jpeg",
+          src: "https://i.ibb.co/4RLbhDwM/Assember-certificate.jpg",
           caption: "Federal Ministry of Industry, Trade & Investment Assembler Certificate",
           date: "December 18, 2020",
         },
         {
-          src: "/images/finance-ministry-recognition.png",
+          src: "https://i.ibb.co/215QR84Z/FMF-1.png",
           caption: "Federal Ministry of Finance Recognition as Manufacturer/Assembler of Prepaid Meters",
           date: "November 9, 2021",
         },
         {
-          src: "/images/nigeria-customs-recognition.png",
+          src: "https://i.ibb.co/sd4Srqpf/CC-1.png",
           caption: "Nigeria Customs Service Recognition as Manufacturer/Assembler of Prepaid Meters",
           date: "December 10, 2021",
         },
@@ -223,7 +223,7 @@ export default function CertificationsPage() {
 
       // Generate and download the zip file
       const content = await zip.generateAsync({ type: "blob" })
-      saveAs(content, "Unistar-Certificates.zip")
+      FileSaver.saveAs(content, "Unistar-Certificates.zip") // Changed to use FileSaver.saveAs
     } catch (error) {
       console.error("Error creating zip file:", error)
       alert("Failed to download certificates. Please try again later.")

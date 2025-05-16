@@ -21,7 +21,7 @@ export default function NewsSection() {
             <CardHeader className="p-0">
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&query=electricity company executives signing partnership agreement in Nigeria"
+                  src="https://i.ibb.co/N6s5SdGG/news.jpg"
                   alt="New Partnership Announcement"
                   width={500}
                   height={300}
@@ -51,7 +51,7 @@ export default function NewsSection() {
             <CardHeader className="p-0">
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&query=modern factory expansion ceremony with ribbon cutting in Nigeria"
+                  src="https://i.ibb.co/N6s5SdGG/news.jpg"
                   alt="Manufacturing Facility Expansion"
                   width={500}
                   height={300}
@@ -81,7 +81,7 @@ export default function NewsSection() {
             <CardHeader className="p-0">
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&query=smart electricity meter technology showcase with digital display"
+                  src="https://i.ibb.co/N6s5SdGG/news.jpg"
                   alt="New Product Launch"
                   width={500}
                   height={300}

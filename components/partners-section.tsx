@@ -15,18 +15,6 @@ export default function PartnersSection() {
           </div>
         </div>
 
-        {/* Technology Partner */}
-        <div className="mt-12 grid gap-8 md:grid-cols-2 items-center">
-          <div className="flex flex-col space-y-4">
-            <h3 className="text-2xl font-bold">Technology Partnership</h3>
-            <p className="text-gray-500">
-              Our strategic partnership with SHENZHEN DONSUN Technology enables us to combine global expertise with
-              local manufacturing capabilities, ensuring our meters meet international standards while being tailored
-              for the Nigerian market.
-            </p>
-          </div>
-        </div>
-
         {/* Distribution Partners */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Distribution Partners</h3>
@@ -35,22 +23,22 @@ export default function PartnersSection() {
               {
                 name: "EKEDC",
                 description: "Eko Electricity Distribution Company",
-                image: "/images/Partners/ekedc-logo.png",
+                image: "https://i.ibb.co/NdS84JJh/image.png",
               },
               {
                 name: "AEDC",
                 description: "Abuja Electricity Distribution Company",
-                image: "/images/Partners/aedc-logo.png",
+                image: "https://i.ibb.co/0yYSfqTm/image.png",
               },
               {
                 name: "IBEDC",
                 description: "Ibadan Electricity Distribution Company",
-                image: "/images/Partners/ibedc-logo.png",
+                image: "https://i.ibb.co/s9VFvVdr/image.png",
               },
               {
                 name: "PHED",
                 description: "Port Harcourt Electricity Distribution Company",
-                image: "/images/Partners/phed-logo.png",
+                image: "https://i.ibb.co/d0NNnH8C/image.png",
               },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
@@ -80,17 +68,17 @@ export default function PartnersSection() {
               {
                 name: "NERC",
                 description: "Nigerian Electricity Regulatory Commission",
-                image: "/images/Partners/nerc-logo.png",
+                image: "https://i.ibb.co/8nzCFCxv/image.png",
               },
               {
                 name: "SON",
                 description: "Standards Organisation of Nigeria",
-                image: "/images/Partners/son-logo.png",
+                image: "https://i.ibb.co/6R76635z/image.png",
               },
               {
                 name: "FMoP",
                 description: "Federal Ministry of Power",
-                image: "/images/Partners/fmop-logo.png",
+                image: "https://i.ibb.co/whZZwjRQ/image.png",
               },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">

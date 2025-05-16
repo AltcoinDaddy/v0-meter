@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl bg-white p-6">
               {/* Use regular img tag for better compatibility */}
               <img
-                src="/images/three-phase-meter.png"
+                src="https://i.ibb.co/vCYQgG2p/meter.png "
                 alt="Unistar Three Phase Prepaid Electricity Meter"
                 className="object-contain h-full w-full"
                 style={{ maxHeight: "400px" }}
@@ -45,7 +45,7 @@ export default function HeroSection() {
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
                 <p className="text-sm font-medium flex items-center whitespace-nowrap">
                   <img
-                    src="/images/nigerian-flag-with-coa.png"
+                    src="https://i.ibb.co/93kPSBkd/image.png"
                     alt="Nigerian Flag with Coat of Arms"
                     className="h-5 w-auto mr-2"
                   />

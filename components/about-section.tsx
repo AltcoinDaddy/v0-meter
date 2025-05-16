@@ -25,7 +25,7 @@ export default function AboutSection() {
         <div className="mt-12 grid gap-8 md:grid-cols-2 items-center">
           <div className="relative overflow-hidden rounded-xl">
             <Image
-              src="/images/manufacturing-facility.png"
+              src="https://i.ibb.co/dJK5HHT8/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
               alt="Unistar Manufacturing Facility with meter testing equipment"
               width={800}
               height={600}

@@ -30,7 +30,7 @@ export default function MadeInNigeriaBadge({ className = "", size = "md" }: Made
   return (
     <div className={`bg-white/90 backdrop-blur-sm shadow-sm flex items-center ${currentSize.container} ${className}`}>
       <Image
-        src="/images/nigerian-flag.png"
+        src="https://i.ibb.co/hRwXXs0N/nigerian-flag.png"
         alt="Nigerian Flag"
         width={currentSize.flag.width}
         height={currentSize.flag.height}

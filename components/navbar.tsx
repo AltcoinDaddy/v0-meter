@@ -38,7 +38,7 @@ export default function Navbar() {
             ) : (
               // Use regular HTML img tag for better compatibility
               <img
-                src="/images/unistar-logo.png"
+                src="https://i.ibb.co/RkNpdNRs/LOGO.png"
                 alt="Unistar Logo"
                 className="h-8 w-auto rounded-full"
                 onError={() => {

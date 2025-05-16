@@ -1,77 +1,59 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { Linkedin, Twitter, Mail } from "lucide-react"
+import { Linkedin, Twitter, Mail, Facebook } from "lucide-react"
 import Link from "next/link"
 
 export default function TeamSection() {
   const teamMembers = [
     {
-      name: "Dr. Samuel Adegoke",
-      position: "Chief Executive Officer",
-      bio: "With over 25 years of experience in the energy sector, Dr. Adegoke has led Unistar's growth since its founding in 2003. He holds a Ph.D. in Electrical Engineering and has been instrumental in establishing Unistar as Nigeria's leading meter manufacturer.",
-      image: "/placeholder.svg?height=300&width=400&query=professional Nigerian male CEO in business suit",
+      name: "Dr. D.W Atsu Ph.D",
+      position: "Chairman",
+      bio: "",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "mailto:samuel.adegoke@unistar-hitech.com",
+        email: "#",
+        facebook: "#"
       },
     },
     {
-      name: "Eng. Oluwaseun Oladipo",
-      position: "Chief Technical Officer",
-      bio: "Eng. Oladipo oversees all technical operations and product development at Unistar. With a background in electronic engineering and over 15 years of experience in metering technology, he ensures our products meet the highest standards of quality and innovation.",
+      name: "Benjamin A. Bolarinwa FCA, LL.B",
+      position: "Vice Chairman",
+      bio: "",
       image:
         "/placeholder.svg?height=300&width=400&query=professional Nigerian male engineer in business casual attire",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "mailto:oluwaseun.oladipo@unistar-hitech.com",
+        email: "#",
+        facebook: "#"
       },
     },
     {
-      name: "Mrs. Amina Bello",
-      position: "Chief Operations Officer",
-      bio: "Mrs. Bello manages Unistar's day-to-day operations, overseeing manufacturing, supply chain, and quality control. Her expertise in operational excellence has been crucial in scaling our production capacity to meet growing demand.",
+      name: "Dr. Babafemi Oluwaseun Obasanjo Ph.D",
+      position: "Executive Director",
+      bio: "",
       image: "/placeholder.svg?height=300&width=400&query=professional Nigerian female executive in business attire",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "mailto:amina.bello@unistar-hitech.com",
+        email: "#",
+        facebook: "#"
       },
     },
     {
-      name: "Mr. Chukwudi Okonkwo",
-      position: "Chief Financial Officer",
-      bio: "Mr. Okonkwo brings over 20 years of financial management experience to Unistar. His strategic financial planning and sound fiscal policies have been instrumental in the company's sustainable growth and expansion.",
+      name: "Barr. Oba Olubiyi Obasanjo LL.B, B.L",
+      position: "Executive Director",
+      bio: ".",
       image: "/placeholder.svg?height=300&width=400&query=professional Nigerian male financial executive in suit",
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "mailto:chukwudi.okonkwo@unistar-hitech.com",
+        email: "#",
+        facebook: "#"
       },
     },
-    {
-      name: "Ms. Folake Adeyemi",
-      position: "Head of Business Development",
-      bio: "Ms. Adeyemi leads Unistar's business development initiatives, focusing on expanding our market presence and fostering strategic partnerships. Her deep understanding of Nigeria's energy sector has helped position Unistar as a trusted partner for DISCOs nationwide.",
-      image: "/placeholder.svg?height=300&width=400&query=professional Nigerian female business executive smiling",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "mailto:folake.adeyemi@unistar-hitech.com",
-      },
-    },
-    {
-      name: "Eng. Ibrahim Musa",
-      position: "Head of Research & Development",
-      bio: "Eng. Musa leads our R&D department, driving innovation in metering technology. His team is responsible for developing new products and enhancing existing ones to meet the evolving needs of Nigeria's energy sector.",
-      image: "/placeholder.svg?height=300&width=400&query=professional Nigerian male engineer with glasses in office",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "mailto:ibrahim.musa@unistar-hitech.com",
-      },
-    },
+
   ]
 
   return (
@@ -117,6 +99,10 @@ export default function TeamSection() {
                     <Link href={member.social.email} className="text-gray-400 hover:text-primary">
                       <Mail className="h-5 w-5" />
                       <span className="sr-only">Email</span>
+                    </Link>
+                    <Link href={member.social.facebook} className="text-gray-400 hover:text-primary">
+                      <Facebook className="h-5 w-5" />
+                      <span className="sr-only">facebook</span>
                     </Link>
                   </div>
                 </div>

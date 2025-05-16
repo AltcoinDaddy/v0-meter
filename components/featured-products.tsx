@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="/images/meter.png"
+                        src="https://i.ibb.co/vCYQgG2p/meter.png"
                         alt="Prepaid Electricity Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
@@ -74,14 +74,7 @@ export default function FeaturedProducts() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Link href="/products/single-phase/ddsy111" className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
+                <CardFooter className="p-6 pt-0"></CardFooter>
               </Card>
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
@@ -92,7 +85,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="/images/meter.png"
+                        src="https://i.ibb.co/vCYQgG2p/meter.png"
                         alt="Split Prepayment Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
@@ -121,14 +114,7 @@ export default function FeaturedProducts() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Link href="/products/single-phase/split-prepayment" className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
+                <CardFooter className="p-6 pt-0"></CardFooter>
               </Card>
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
@@ -139,7 +125,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="/images/meter.png"
+                        src="https://i.ibb.co/vCYQgG2p/meter.png"
                         alt="Keypad Prepayment Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
@@ -168,14 +154,7 @@ export default function FeaturedProducts() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Link href="/products/single-phase/keypad" className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
+                <CardFooter className="p-6 pt-0"></CardFooter>
               </Card>
             </div>
           </TabsContent>
@@ -190,7 +169,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="/images/three-phase-meter.png"
+                        src="https://i.ibb.co/93kPSBkd/image.png"
                         alt="DTSY111 Three-Phase Prepaid Electricity Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, threePhase: true }))}
@@ -220,14 +199,7 @@ export default function FeaturedProducts() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Link href="/products/three-phase/dtsy111" className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
+                <CardFooter className="p-6 pt-0"></CardFooter>
               </Card>
               <Card className="flex flex-col overflow-hidden border-2 border-transparent transition-colors hover:border-primary/50">
                 <CardHeader className="p-0">
@@ -238,7 +210,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="/images/three-phase-meter.png"
+                        src="https://i.ibb.co/93kPSBkd/image.png"
                         alt="Commercial/Industrial Three-Phase Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, commercial: true }))}
@@ -267,14 +239,7 @@ export default function FeaturedProducts() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Link href="/products/three-phase/commercial" className="w-full">
-                    <Button variant="outline" className="w-full">
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardFooter>
+                <CardFooter className="p-6 pt-0"></CardFooter>
               </Card>
             </div>
           </TabsContent>

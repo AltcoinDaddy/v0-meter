@@ -33,19 +33,7 @@ export default function Home() {
                 Nigeria&apos;s energy sector.
               </p>
             </div>
-            <div className="flex flex-col gap-1 min-[400px]:flex-row">
-              <Link href="/products">
-                <Button className="px-8">
-                  Explore Our Products
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="outline" className="px-8">
-                  Request a Quote
-                </Button>
-              </Link>
-            </div>
+
           </div>
         </div>
       </section>

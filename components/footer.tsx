@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/placeholder.svg?key=vvj5r"
+                src="https://i.ibb.co/RkNpdNRs/LOGO.png"
                 alt="Unistar Logo"
                 width={40}
                 height={40}

@@ -13,8 +13,8 @@ export const metadata = {
   description:
     "Unistar Hi-Tech Systems Limited is Nigeria's leading manufacturer of electric prepaid meters, serving the nation's power sector since 2003.",
   icons: {
-    icon: "/images/unistar-logo.png",
-    apple: "/images/unistar-logo.png",
+    icon: "https://i.ibb.co/RkNpdNRs/LOGO.png",
+    apple: "https://i.ibb.co/RkNpdNRs/LOGO.png",
   },
     generator: 'v0.dev'
 }
@@ -28,8 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Use regular HTML link tags for favicon */}
-        <link rel="icon" href="/images/unistar-logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/images/unistar-logo.png" />
+        <link rel="icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" sizes="any" />
+        <link rel="apple-touch-icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" />
         {/* Add debugging script */}
         <Script id="image-debug">
           {`

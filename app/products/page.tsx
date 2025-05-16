@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check, Download, FileText } from "lucide-react"
+import { Check, Download } from "lucide-react"
 import FeaturedProducts from "@/components/featured-products"
 
 export default function ProductsPage() {
@@ -51,7 +51,11 @@ export default function ProductsPage() {
             <Card className="bg-white border-0 shadow-sm hover:shadow-md transition-all">
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
-                  <img src="/images/meter.png" alt="Single-Phase Meters" className="object-cover w-full h-full" />
+                  <img
+                    src="https://i.ibb.co/vCYQgG2p/meter.png"
+                    alt="Single-Phase Meters"
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </CardHeader>
               <CardContent className="p-6">
@@ -71,7 +75,7 @@ export default function ProductsPage() {
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
                   <img
-                    src="/images/three-phase-meter.png"
+                    src="https://i.ibb.co/93kPSBkd/image.png"
                     alt="Three-Phase Meters"
                     className="object-cover w-full h-full"
                   />
@@ -198,11 +202,6 @@ export default function ProductsPage() {
                     </div>
                   </li>
                 </ul>
-                <div className="mt-6 flex justify-center">
-                  <Button variant="outline" className="gap-2">
-                    <FileText className="h-4 w-4" /> Download Full Specifications
-                  </Button>
-                </div>
               </TabsContent>
               <TabsContent value="three" className="mt-6 p-6 bg-white rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold mb-4">Three-Phase Meter Specifications</h3>
@@ -238,11 +237,6 @@ export default function ProductsPage() {
                     </div>
                   </li>
                 </ul>
-                <div className="mt-6 flex justify-center">
-                  <Button variant="outline" className="gap-2">
-                    <FileText className="h-4 w-4" /> Download Full Specifications
-                  </Button>
-                </div>
               </TabsContent>
               <TabsContent value="split" className="mt-6 p-6 bg-white rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold mb-4">Split Meter Specifications</h3>
@@ -278,11 +272,6 @@ export default function ProductsPage() {
                     </div>
                   </li>
                 </ul>
-                <div className="mt-6 flex justify-center">
-                  <Button variant="outline" className="gap-2">
-                    <FileText className="h-4 w-4" /> Download Full Specifications
-                  </Button>
-                </div>
               </TabsContent>
               <TabsContent value="smart" className="mt-6 p-6 bg-white rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold mb-4">Smart Meter Specifications</h3>
@@ -319,11 +308,6 @@ export default function ProductsPage() {
                     </div>
                   </li>
                 </ul>
-                <div className="mt-6 flex justify-center">
-                  <Button variant="outline" className="gap-2">
-                    <FileText className="h-4 w-4" /> Download Full Specifications
-                  </Button>
-                </div>
               </TabsContent>
             </Tabs>
           </div>

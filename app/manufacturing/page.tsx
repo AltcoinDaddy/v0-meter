@@ -4,18 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  ArrowRight,
-  Award,
-  CheckCircle,
-  Factory,
-  FileText,
-  Lightbulb,
-  Recycle,
-  Settings,
-  Users,
-  Workflow,
-} from "lucide-react"
+import { ArrowRight, Award, CheckCircle, Factory, Lightbulb, Recycle, Settings, Users, Workflow } from "lucide-react"
 
 export default function ManufacturingPage() {
   return (
@@ -53,7 +42,7 @@ export default function ManufacturingPage() {
             <div className="flex items-center justify-center">
               <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl">
                 <Image
-                  src="/placeholder.svg?key=gskha"
+                  src="https://i.ibb.co/V1LdFDM/team.png"
                   alt="Unistar Manufacturing Facility"
                   width={800}
                   height={600}
@@ -123,7 +112,7 @@ export default function ManufacturingPage() {
           <div className="mt-16 grid gap-8 md:grid-cols-2 items-center">
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?key=exu1b"
+                src="https://i.ibb.co/dJK5HHT8/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                 alt="Unistar Manufacturing Facility Aerial View"
                 width={800}
                 height={600}
@@ -312,73 +301,42 @@ export default function ManufacturingPage() {
               </ul>
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold">Certifications</h3>
+              <h3 className="text-2xl font-bold">Government & Regulatory Partners</h3>
               <div className="grid grid-cols-2 gap-4">
-                <Card className="bg-white border-0 shadow-sm">
-                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                {[
+                  {
+                    name: "NERC",
+                    description: "Nigerian Electricity Regulatory Commission",
+                    image: "https://i.ibb.co/8nzCFCxv/image.png",
+                  },
+                  {
+                    name: "SON",
+                    description: "Standards Organisation of Nigeria",
+                    image: "https://i.ibb.co/6R76635z/image.png",
+                  },
+                  {
+                    name: "FMoP",
+                    description: "Federal Ministry of Power",
+                    image: "https://i.ibb.co/whZZwjRQ/image.png",
+                  },
+                ].map((partner, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center space-y-4"
+                  >
                     <div className="relative w-16 h-16">
                       <Image
-                        src="/placeholder.svg?key=dwggc"
-                        alt="STS Certification"
+                        src={partner.image || "/placeholder.svg"}
+                        alt={`${partner.name} Logo`}
                         width={64}
                         height={64}
                         className="object-contain"
                       />
                     </div>
-                    <h4 className="font-bold">STS Certification</h4>
-                    <p className="text-sm text-gray-500">IEC 62055-41/51/52 compliant</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-0 shadow-sm">
-                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                    <div className="relative w-16 h-16">
-                      <Image
-                        src="/placeholder.svg?height=64&width=64&query=ISO 9001 certification logo"
-                        alt="ISO 9001"
-                        width={64}
-                        height={64}
-                        className="object-contain"
-                      />
-                    </div>
-                    <h4 className="font-bold">ISO 9001:2015</h4>
-                    <p className="text-sm text-gray-500">Quality Management System</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-0 shadow-sm">
-                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                    <div className="relative w-16 h-16">
-                      <Image
-                        src="/placeholder.svg?height=64&width=64&query=NERC certification logo Nigeria"
-                        alt="NERC Certification"
-                        width={64}
-                        height={64}
-                        className="object-contain"
-                      />
-                    </div>
-                    <h4 className="font-bold">NERC Approved</h4>
-                    <p className="text-sm text-gray-500">Nigerian Electricity Regulatory Commission</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-white border-0 shadow-sm">
-                  <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
-                    <div className="relative w-16 h-16">
-                      <Image
-                        src="/placeholder.svg?height=64&width=64&query=SON certification logo Nigeria"
-                        alt="SON Certification"
-                        width={64}
-                        height={64}
-                        className="object-contain"
-                      />
-                    </div>
-                    <h4 className="font-bold">SON Certified</h4>
-                    <p className="text-sm text-gray-500">Standards Organisation of Nigeria</p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="flex justify-center pt-4">
-                <Button variant="outline" className="gap-2">
-                  <FileText className="h-4 w-4" /> Download Certification Documents
-                </Button>
+                    <h4 className="font-bold">{partner.name}</h4>
+                    <p className="text-sm text-gray-500">{partner.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -526,7 +484,7 @@ export default function ManufacturingPage() {
             </div>
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?height=600&width=800&query=Nigerian engineers and technicians working in electronics manufacturing"
+                src="https://i.ibb.co/SXcF0t9V/Assembly-Packing-Line-1.png"
                 alt="Skills Development at Unistar"
                 width={800}
                 height={600}
@@ -552,7 +510,7 @@ export default function ManufacturingPage() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?height=600&width=800&query=research and development laboratory for electricity meters"
+                src="https://i.ibb.co/twW6RJqG/Parameterization-Kit-1.png"
                 alt="Unistar R&D Laboratory"
                 width={800}
                 height={600}
@@ -653,7 +611,7 @@ export default function ManufacturingPage() {
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="relative w-32 h-32 overflow-hidden rounded-full">
                     <Image
-                      src="/placeholder.svg?height=128&width=128&query=professional Nigerian male manufacturing executive"
+                      src="/placeholder-i46nx.png"
                       alt="Oluwaseun Adeyemi"
                       width={128}
                       height={128}
@@ -661,12 +619,9 @@ export default function ManufacturingPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Oluwaseun Adeyemi</h3>
-                    <p className="text-primary font-medium">Head of Manufacturing</p>
-                    <p className="text-gray-500 mt-2">
-                      With over 15 years of experience in electronics manufacturing, Oluwaseun leads our manufacturing
-                      operations with a focus on efficiency and quality.
-                    </p>
+                    <h3 className="text-xl font-bold">Dr. D.W Atsu Ph.D</h3>
+                    <p className="text-primary font-medium">Chairman</p>
+                    <p className="text-gray-500 mt-2"></p>
                   </div>
                 </div>
               </CardContent>
@@ -676,7 +631,7 @@ export default function ManufacturingPage() {
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="relative w-32 h-32 overflow-hidden rounded-full">
                     <Image
-                      src="/placeholder.svg?height=128&width=128&query=professional Nigerian female quality control manager"
+                      src="/placeholder-v2h7r.png"
                       alt="Amina Ibrahim"
                       width={128}
                       height={128}
@@ -684,22 +639,41 @@ export default function ManufacturingPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Amina Ibrahim</h3>
-                    <p className="text-primary font-medium">Quality Control Manager</p>
-                    <p className="text-gray-500 mt-2">
-                      Amina ensures that every meter leaving our facility meets our rigorous quality standards through
-                      comprehensive testing and inspection protocols.
-                    </p>
+                    <h3 className="text-xl font-bold">Benjamin A. Bolarinwa FCA, LL.B</h3>
+                    <p className="text-primary font-medium">Vice Chairman</p>
+                    <p className="text-gray-500 mt-2"></p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
             <Card className="bg-white border-0 shadow-sm">
               <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className="relative w-32 h-32 overflow-hidden rounded-full">
                     <Image
-                      src="/placeholder.svg?height=128&width=128&query=professional Nigerian male engineering director"
+                      src="/placeholder-v2h7r.png"
+                      alt="Amina Ibrahim"
+                      width={128}
+                      height={128}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">Dr. Babafemi Oluwaseun Obasanjo Ph.D</h3>
+                    <p className="text-primary font-medium">Executive Director</p>
+                    <p className="text-gray-500 mt-2"></p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-0 shadow-sm">
+              <CardContent className="p-6">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="relative w-32 h-32 overflow-hidden rounded-full">
+                    <Image
+                      src="/placeholder-7ns8m.png"
                       alt="Dr. Emmanuel Okonkwo"
                       width={128}
                       height={128}
@@ -707,12 +681,9 @@ export default function ManufacturingPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Dr. Emmanuel Okonkwo</h3>
-                    <p className="text-primary font-medium">Director of Engineering</p>
-                    <p className="text-gray-500 mt-2">
-                      Dr. Okonkwo leads our engineering team, overseeing product design, process improvement, and
-                      technological innovation.
-                    </p>
+                    <h3 className="text-xl font-bold">Barr. Oba Olubiyi Obasanjo LL.B, B.L</h3>
+                    <p className="text-primary font-medium">Executive Director</p>
+                    <p className="text-gray-500 mt-2"></p>
                   </div>
                 </div>
               </CardContent>
@@ -743,7 +714,7 @@ export default function ManufacturingPage() {
 
           <div className="relative aspect-video w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
             <Image
-              src="/placeholder.svg?height=720&width=1280&query=modern electronics manufacturing facility interior panoramic view"
+              src="/placeholder-vl67u.png"
               alt="Unistar Manufacturing Facility Virtual Tour"
               width={1280}
               height={720}
@@ -775,17 +746,13 @@ export default function ManufacturingPage() {
               <CardContent className="p-0">
                 <div className="relative aspect-video w-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=500&query=electronics assembly line with workers"
+                    src="https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                     alt="Assembly Line"
                     width={500}
                     height={300}
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <Button variant="secondary" size="sm">
-                      View Area
-                    </Button>
-                  </div>
+                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity"></div>
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold">Assembly Line</h3>
@@ -797,17 +764,13 @@ export default function ManufacturingPage() {
               <CardContent className="p-0">
                 <div className="relative aspect-video w-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=500&query=quality control laboratory with testing equipment"
+                    src="https://i.ibb.co/twW6RJqG/Parameterization-Kit-1.png"
                     alt="Testing Laboratory"
                     width={500}
                     height={300}
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <Button variant="secondary" size="sm">
-                      View Area
-                    </Button>
-                  </div>
+                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity"></div>
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold">Testing Laboratory</h3>
@@ -819,17 +782,13 @@ export default function ManufacturingPage() {
               <CardContent className="p-0">
                 <div className="relative aspect-video w-full overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=500&query=research and development center with engineers"
+                    src="https://i.ibb.co/SXcF0t9V/Assembly-Packing-Line-1.png"
                     alt="R&D Center"
                     width={500}
                     height={300}
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
-                    <Button variant="secondary" size="sm">
-                      View Area
-                    </Button>
-                  </div>
+                  <div className="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity"></div>
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold">R&D Center</h3>
@@ -902,7 +861,7 @@ export default function ManufacturingPage() {
             </div>
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/placeholder.svg?height=600&width=800&query=sustainable manufacturing facility with solar panels"
+                src="Corporate-Profile-15072024-14.png"
                 alt="Sustainable Manufacturing at Unistar"
                 width={800}
                 height={600}
@@ -932,12 +891,9 @@ export default function ManufacturingPage() {
                   Schedule a Visit
                 </Button>
               </Link>
+
               <Link href="/solutions">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white font-medium"
-                >
+                <Button size="lg" variant="secondary" className="px-8">
                   Explore Our Products
                 </Button>
               </Link>
