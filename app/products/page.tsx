@@ -180,7 +180,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 5(60)A, 10(80)A
+                      <span className="font-medium">Current Rating:</span> 5(80)A, 10(100)A
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -250,7 +250,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 5(60)A, 10(80)A, 10(100)A
+                      <span className="font-medium">Current Rating:</span> 5(80)A, 5(100)A
                     </div>
                   </li>
                   <li className="flex items-start">

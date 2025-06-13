@@ -179,7 +179,8 @@ export default function ManufacturingPage() {
                 },
                 {
                   title: "Meter Assembly",
-                  description: "/placeholder.svg?key=vy6re",
+                  description:
+                    "Skilled technicians assemble meters with precision, ensuring all components are properly integrated.",
                   image: "/placeholder.svg?key=124i1",
                 },
                 {
@@ -313,6 +314,11 @@ export default function ManufacturingPage() {
                     name: "SON",
                     description: "Standards Organisation of Nigeria",
                     image: "https://i.ibb.co/6R76635z/image.png",
+                  },
+                  {
+                    name: "NEMSA",
+                    description: "Nigerian Electricity Management Services Agency",
+                    image: "https://i.ibb.co/bMGhXDpD/NEMSA.png",
                   },
                   {
                     name: "FMoP",
@@ -861,7 +867,7 @@ export default function ManufacturingPage() {
             </div>
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="Corporate-Profile-15072024-14.png"
+                src="https://i.ibb.co/dJK5HHT8/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png"
                 alt="Sustainable Manufacturing at Unistar"
                 width={800}
                 height={600}

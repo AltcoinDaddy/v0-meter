@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Award, BarChart3, CheckCircle, Factory, Users } from "lucide-react"
+import { Award, BarChart3, CheckCircle, Factory, Users } from "lucide-react"
 import HeroSection from "@/components/hero-section"
 import StatsSection from "@/components/stats-section"
 import FeaturedProducts from "@/components/featured-products"
@@ -33,7 +33,6 @@ export default function Home() {
                 Nigeria&apos;s energy sector.
               </p>
             </div>
-
           </div>
         </div>
       </section>

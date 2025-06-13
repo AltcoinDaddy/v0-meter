@@ -58,8 +58,8 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-gray-500">+234 123 456 7890</p>
-                    <p className="text-gray-500">+234 987 654 3210</p>
+                    <p className="text-gray-500">+234 8033441242</p>
+                    <p className="text-gray-500">+234 8129901942</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -68,8 +68,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-500">info@unistar-hitech.com</p>
-                    <p className="text-gray-500">sales@unistar-hitech.com</p>
+                    <p className="text-gray-500">info@unistarhi-tech.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -78,7 +77,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Office Location</h4>
-                    <p className="text-gray-500">123 Industrial Avenue</p>
+                    <p className="text-gray-500">KM 16, Ikorodu Road, Ojota</p>
                     <p className="text-gray-500">Lagos, Nigeria</p>
                   </div>
                 </div>
@@ -89,8 +88,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Business Hours</h4>
                     <p className="text-gray-500">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                    <p className="text-gray-500">Saturday: 9:00 AM - 1:00 PM</p>
-                    <p className="text-gray-500">Sunday: Closed</p>
+                    <p className="text-gray-500">Sunday - Saturday: Closed</p>
                   </div>
                 </div>
               </div>

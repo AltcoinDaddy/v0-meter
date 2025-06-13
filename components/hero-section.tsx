@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="relative w-full max-w-[600px] aspect-video overflow-hidden rounded-xl bg-white p-6">
               {/* Use regular img tag for better compatibility */}
               <img
-                src="https://i.ibb.co/vCYQgG2p/meter.png "
+                src="https://i.ibb.co/vCYQgG2p/meter.png"
                 alt="Unistar Three Phase Prepaid Electricity Meter"
                 className="object-contain h-full w-full"
                 style={{ maxHeight: "400px" }}

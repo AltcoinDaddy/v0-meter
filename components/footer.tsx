@@ -25,19 +25,19 @@ export default function Footer() {
               sector with quality and innovation.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="text-gray-400 hover:text-white">
+              <Link href="#" className="text-gray-400 hover:text-white">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="https://twitter.com" className="text-gray-400 hover:text-white">
+              <Link href="#" className="text-gray-400 hover:text-white">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://instagram.com" className="text-gray-400 hover:text-white">
+              <Link href="#" className="text-gray-400 hover:text-white">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://linkedin.com" className="text-gray-400 hover:text-white">
+              <Link href="#" className="text-gray-400 hover:text-white">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -71,10 +71,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4">Contact Us</h3>
             <address className="not-italic text-gray-400 text-sm space-y-2">
-              <p>123 Industrial Avenue</p>
+              <p>KM 16, Ikorodu Road, Ojota</p>
               <p>Lagos, Nigeria</p>
               <p className="pt-2">
-                <strong className="text-white">Phone:</strong> +234 123 456 7890
+                <strong className="text-white">Phone:</strong> +234 8033441242
               </p>
               <p>
                 <strong className="text-white">Email:</strong> info@unistar-hitech.com
@@ -99,13 +99,13 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
+            <Link href="#" className="text-gray-400 hover:text-white text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm">
+            <Link href="#" className="text-gray-400 hover:text-white text-sm">
               Terms & Conditions
             </Link>
-            <Link href="/warranty" className="text-gray-400 hover:text-white text-sm">
+            <Link href="#" className="text-gray-400 hover:text-white text-sm">
               Warranty Information
             </Link>
           </div>

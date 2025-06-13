@@ -40,6 +40,23 @@ export default function PartnersSection() {
                 description: "Port Harcourt Electricity Distribution Company",
                 image: "https://i.ibb.co/d0NNnH8C/image.png",
               },
+                 {
+                name: "JEDC",
+                description: "Jos Electricity Distribution Company",
+                image: "https://i.ibb.co/JWmmP9fn/qq-Sdt2-Ir-400x400.png",
+              },
+
+                 {
+                name: "BEDC",
+                description: "Benin Electricity Distribution Company",
+                image: "https://i.ibb.co/SD8ZsQ7j/1630523181566.png",
+              },
+              
+                 {
+                name: "IE",
+                description: "Ikeja Electric",
+                image: "https://i.ibb.co/60Vw3Tyz/download.png",
+              },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex flex-col items-center text-center">
