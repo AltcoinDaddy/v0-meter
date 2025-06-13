@@ -75,7 +75,7 @@ export default function ProductsPage() {
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
                   <img
-                    src="https://i.ibb.co/93kPSBkd/image.png"
+                    src="https://i.ibb.co/1fdLRHb2/image.png"
                     alt="Three-Phase Meters"
                     className="object-cover w-full h-full"
                   />
@@ -355,10 +355,7 @@ export default function ProductsPage() {
               </Link>
               <Link href="/manufacturing">
                 <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white"
-                >
+                  size="lg" variant="secondary" className="px-8">
                   Learn About Manufacturing
                 </Button>
               </Link>

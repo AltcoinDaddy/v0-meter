@@ -169,7 +169,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/93kPSBkd/image.png"
+                        src="https://i.ibb.co/1fdLRHb2/image.png"
                         alt="DTSY111 Three-Phase Prepaid Electricity Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, threePhase: true }))}
@@ -210,7 +210,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/93kPSBkd/image.png"
+                        src="https://i.ibb.co/1fdLRHb2/image.png"
                         alt="Commercial/Industrial Three-Phase Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, commercial: true }))}

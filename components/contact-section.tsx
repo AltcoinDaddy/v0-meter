@@ -3,33 +3,68 @@
 import type React from "react"
 
 import { useState } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react"
+import { sendContactMessage } from "@/app/actions/email-actions"
 
 export default function ContactSection() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [selectedProduct, setSelectedProduct] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { name: string; value: string },
+  ) => {
+    const { name, value } = "target" in e ? e.target : e
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormStatus("submitting")
 
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus("success")
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormStatus("idle")
-        const form = e.target as HTMLFormElement
-        form.reset()
-        setSelectedProduct("")
-      }, 3000)
-    }, 1500)
+    try {
+      const formDataObj = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value)
+      })
+      formDataObj.append("product", selectedProduct)
+
+      const result = await sendContactMessage(formDataObj)
+
+      if (result.success) {
+        setFormStatus("success")
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormStatus("idle")
+          setFormData({
+            name: "",
+            company: "",
+            email: "",
+            phone: "",
+            message: "",
+          })
+          setSelectedProduct("")
+        }, 3000)
+      } else {
+        setFormStatus("error")
+        setErrorMessage(result.message || "Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      setFormStatus("error")
+      setErrorMessage("An unexpected error occurred. Please try again.")
+    }
   }
 
   return (
@@ -106,6 +141,8 @@ export default function ContactSection() {
                     <Input
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="John Doe"
                       required
                       disabled={formStatus === "submitting" || formStatus === "success"}
@@ -118,6 +155,8 @@ export default function ContactSection() {
                     <Input
                       id="company"
                       name="company"
+                      value={formData.company}
+                      onChange={handleChange}
                       placeholder="Your Company"
                       disabled={formStatus === "submitting" || formStatus === "success"}
                     />
@@ -132,6 +171,8 @@ export default function ContactSection() {
                       id="email"
                       name="email"
                       type="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="you@example.com"
                       required
                       disabled={formStatus === "submitting" || formStatus === "success"}
@@ -144,6 +185,8 @@ export default function ContactSection() {
                     <Input
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       placeholder="+234 123 456 7890"
                       disabled={formStatus === "submitting" || formStatus === "success"}
                     />
@@ -178,6 +221,8 @@ export default function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Please provide details about your inquiry..."
                     rows={5}
                     required
@@ -210,15 +255,14 @@ export default function ContactSection() {
                 )}
 
                 {formStatus === "error" && (
-                  <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-md text-center">
-                    There was an error sending your message. Please try again.
+                  <div className="mt-4 p-3 bg-red-50 text-red-700 rounded-md flex items-center gap-2">
+                    <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                    <p>{errorMessage || "There was an error sending your message. Please try again."}</p>
                   </div>
                 )}
               </form>
             </div>
           </div>
-
-      
         </div>
       </div>
     </section>

@@ -22,11 +22,6 @@ export default function SolutionsPage() {
                   Explore Products
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="px-8">
-                  Request a Quote
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
@@ -170,10 +165,7 @@ export default function SolutionsPage() {
               </Link>
               <Link href="/manufacturing">
                 <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white"
-                >
+                  size="lg" variant="secondary" className="px-8">
                   Learn About Manufacturing
                 </Button>
               </Link>

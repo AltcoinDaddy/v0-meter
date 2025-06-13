@@ -81,21 +81,21 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://facebook.com"
+                    href="#"
                     className="p-3 rounded-full bg-gray-100 hover:bg-primary/10 transition-colors"
                   >
                     <Facebook className="h-5 w-5 text-gray-600 hover:text-primary" />
                     <span className="sr-only">Facebook</span>
                   </Link>
                   <Link
-                    href="https://twitter.com"
+                    href="#"
                     className="p-3 rounded-full bg-gray-100 hover:bg-primary/10 transition-colors"
                   >
                     <Twitter className="h-5 w-5 text-gray-600 hover:text-primary" />
                     <span className="sr-only">Twitter</span>
                   </Link>
                   <Link
-                    href="https://instagram.com"
+                    href="#"
                     className="p-3 rounded-full bg-gray-100 hover:bg-primary/10 transition-colors"
                   >
                     <Instagram className="h-5 w-5 text-gray-600 hover:text-primary" />
@@ -115,11 +115,11 @@ export default function ContactPage() {
               <Card className="overflow-hidden border-0 shadow-sm">
                 <CardContent className="p-0">
                   <div className="relative aspect-video w-full">
-                    <Image src="/placeholder.svg?key=k7ia5" alt="Office Location Map" fill className="object-cover" />
+                    <Image src="https://i.ibb.co/bgpGP7wR/Assembly-Packing-Line-1.png" alt="Office Location Map" fill className="object-cover" />
                     <div className="absolute inset-0 bg-black/5"></div>
                     <div className="absolute bottom-4 left-4 bg-white p-2 rounded-md shadow-md">
                       <p className="text-sm font-medium">Unistar Hi-Tech Systems Limited</p>
-                      <p className="text-xs text-gray-500">Ikeja Industrial Estate, Lagos</p>
+                      <p className="text-xs text-gray-500">Ojota, Lagos State</p>
                     </div>
                   </div>
                 </CardContent>
@@ -134,78 +134,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Sales Offices Section */}
-      <section className="w-full py-12 md:py-24 bg-gray-50">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center space-y-4 text-center mb-12">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Regional Sales Offices</h2>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed">
-                Our sales representatives are available across Nigeria to serve you better.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="bg-white border-0 shadow-sm">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Lagos Office</h3>
-                <p className="text-gray-500 mb-4">
-                  123 Industrial Avenue
-                  <br />
-                  Ikeja Industrial Estate
-                  <br />
-                  Lagos, Nigeria
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Phone:</span> +234 123 456 7890
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Email:</span> lagos@unistar-hitech.com
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-0 shadow-sm">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Abuja Office</h3>
-                <p className="text-gray-500 mb-4">
-                  45 Constitution Avenue
-                  <br />
-                  Central Business District
-                  <br />
-                  Abuja, Nigeria
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Phone:</span> +234 123 456 7891
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Email:</span> abuja@unistar-hitech.com
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white border-0 shadow-sm">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Port Harcourt Office</h3>
-                <p className="text-gray-500 mb-4">
-                  78 Aba Road
-                  <br />
-                  GRA Phase 2
-                  <br />
-                  Port Harcourt, Nigeria
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Phone:</span> +234 123 456 7892
-                </p>
-                <p className="text-gray-500">
-                  <span className="font-medium">Email:</span> portharcourt@unistar-hitech.com
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+   
       {/* FAQ Section */}
       <section className="w-full py-12 md:py-24 bg-white">
         <div className="container px-4 md:px-6">
