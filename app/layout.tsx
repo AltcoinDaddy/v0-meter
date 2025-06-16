@@ -31,7 +31,7 @@ export default function RootLayout({
         <link rel="icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" sizes="any" />
         <link rel="apple-touch-icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" />
         {/* Add debugging script */}
-        <Script id="image-debug">
+        <Script id="image-debug" strategy="afterInteractive">
           {`
           window.addEventListener('error', function(e) {
             if (e.target.tagName === 'IMG') {
@@ -50,9 +50,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

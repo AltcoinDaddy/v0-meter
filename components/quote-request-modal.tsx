@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -19,7 +19,8 @@ import {
 } from "@/components/ui/dialog"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react"
-import { sendQuoteRequest } from "@/app/actions/email-actions"
+import { EMAILJS_SERVICE_ID, EMAILJS_QUOTE_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "@/utils/emailjs"
+import emailjs from "@emailjs/browser"
 
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : ""
 
@@ -51,6 +52,11 @@ export default function QuoteRequestModal({
     agreeToTerms: false,
   })
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY)
+  }, [])
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { name: string; value: string | boolean },
   ) => {
@@ -63,46 +69,48 @@ export default function QuoteRequestModal({
     setFormState("submitting")
 
     try {
-      const formDataObj = new FormData()
-      Object.entries(formData).forEach(([key, value]) => {
-        if (key !== "agreeToTerms") {
-          formDataObj.append(key, value as string)
-        }
-      })
-
-      const result = await sendQuoteRequest(formDataObj)
-
-      if (result.success) {
-        setFormState("success")
-
-        // Reset form after 3 seconds of showing success message
-        setTimeout(() => {
-          if (!isControlled) {
-            setOpen(false)
-          } else {
-            setControlledOpen?.(false)
-          }
-
-          // Reset form state after modal closes
-          setTimeout(() => {
-            setFormState("idle")
-            setFormData({
-              name: "",
-              company: "",
-              email: "",
-              phone: "",
-              address: "",
-              productType: "",
-              quantity: "",
-              additionalInfo: "",
-              agreeToTerms: false,
-            })
-          }, 300)
-        }, 3000)
-      } else {
-        setFormState("error")
-        setErrorMessage(result.message || "Failed to send quote request. Please try again.")
+      // Prepare template parameters
+      const templateParams = {
+        name: formData.name,
+        company: formData.company || "Not provided",
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address || "Not provided",
+        product_type: formData.productType,
+        quantity: formData.quantity,
+        additional_info: formData.additionalInfo || "Not provided",
+        to_email: "iinfounistar@gmail.com", // Updated email address
       }
+
+      // Send email using EmailJS
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_QUOTE_TEMPLATE_ID, templateParams)
+
+      setFormState("success")
+
+      // Reset form after 3 seconds of showing success message
+      setTimeout(() => {
+        if (!isControlled) {
+          setOpen(false)
+        } else {
+          setControlledOpen?.(false)
+        }
+
+        // Reset form state after modal closes
+        setTimeout(() => {
+          setFormState("idle")
+          setFormData({
+            name: "",
+            company: "",
+            email: "",
+            phone: "",
+            address: "",
+            productType: "",
+            quantity: "",
+            additionalInfo: "",
+            agreeToTerms: false,
+          })
+        }, 300)
+      }, 3000)
     } catch (error) {
       console.error("Error submitting form:", error)
       setFormState("error")

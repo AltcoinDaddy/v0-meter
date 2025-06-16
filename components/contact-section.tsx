@@ -2,13 +2,14 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react"
-import { sendContactMessage } from "@/app/actions/email-actions"
+import { EMAILJS_SERVICE_ID, EMAILJS_CONTACT_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "@/utils/emailjs"
+import emailjs from "@emailjs/browser"
 
 export default function ContactSection() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
@@ -22,6 +23,11 @@ export default function ContactSection() {
     message: "",
   })
 
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY)
+  }, [])
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { name: string; value: string },
   ) => {
@@ -34,32 +40,34 @@ export default function ContactSection() {
     setFormStatus("submitting")
 
     try {
-      const formDataObj = new FormData()
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataObj.append(key, value)
-      })
-      formDataObj.append("product", selectedProduct)
-
-      const result = await sendContactMessage(formDataObj)
-
-      if (result.success) {
-        setFormStatus("success")
-        // Reset form after 3 seconds
-        setTimeout(() => {
-          setFormStatus("idle")
-          setFormData({
-            name: "",
-            company: "",
-            email: "",
-            phone: "",
-            message: "",
-          })
-          setSelectedProduct("")
-        }, 3000)
-      } else {
-        setFormStatus("error")
-        setErrorMessage(result.message || "Failed to send message. Please try again.")
+      // Prepare template parameters
+      const templateParams = {
+        name: formData.name,
+        company: formData.company || "Not provided",
+        email: formData.email,
+        phone: formData.phone || "Not provided",
+        product_interest: selectedProduct || "Not specified",
+        message: formData.message,
+        to_email: "iinfounistar@gmail.com", // Updated email address
       }
+
+      // Send email using EmailJS
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_CONTACT_TEMPLATE_ID, templateParams)
+
+      setFormStatus("success")
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormStatus("idle")
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          message: "",
+        })
+        setSelectedProduct("")
+      }, 3000)
     } catch (error) {
       console.error("Error submitting form:", error)
       setFormStatus("error")
@@ -103,7 +111,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-500">info@unistarhi-tech.com</p>
+                    <p className="text-gray-500">iinfounistar@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
