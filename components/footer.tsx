@@ -144,54 +144,7 @@ export default function Footer() {
               </p>
             </address>
           </div>
-          <div>
-            <h3 className="text-white font-bold mb-4">Newsletter</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Subscribe to our newsletter for the latest updates and industry insights.
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-400"
-                required
-                disabled={subscriptionStatus === "submitting" || subscriptionStatus === "success"}
-              />
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={subscriptionStatus === "submitting" || subscriptionStatus === "success"}
-              >
-                {subscriptionStatus === "idle" && "Subscribe"}
-                {subscriptionStatus === "submitting" && (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Subscribing...
-                  </>
-                )}
-                {subscriptionStatus === "success" && (
-                  <>
-                    <CheckCircle className="mr-2 h-4 w-4" />
-                    Subscribed!
-                  </>
-                )}
-                {subscriptionStatus === "error" && "Try Again"}
-              </Button>
-
-              {subscriptionStatus === "success" && (
-                <div className="text-green-400 text-xs text-center">Thank you for subscribing to our newsletter!</div>
-              )}
-
-              {subscriptionStatus === "error" && (
-                <div className="text-red-400 text-xs text-center flex items-center justify-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
-                  {errorMessage}
-                </div>
-              )}
-            </form>
-          </div>
+          
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center">
@@ -206,9 +159,7 @@ export default function Footer() {
             <Link href="#" className="text-gray-400 hover:text-white text-sm">
               Terms & Conditions
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white text-sm">
-              Warranty Information
-            </Link>
+            
           </div>
         </div>
       </div>
