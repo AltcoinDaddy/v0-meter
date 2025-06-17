@@ -1,10 +1,63 @@
+"use client"
+
+import type React from "react"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
+import { EMAILJS_SERVICE_ID, EMAILJS_NEWSLETTER_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "@/utils/emailjs"
+import emailjs from "@emailjs/browser"
 
 export default function Footer() {
+  const [email, setEmail] = useState("")
+  const [subscriptionStatus, setSubscriptionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY)
+  }, [])
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    setSubscriptionStatus("submitting")
+
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        email: email,
+        subscription_date: new Date().toLocaleDateString(),
+        to_email: "iinfounistar@gmail.com", // Same email address as other forms
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_NEWSLETTER_TEMPLATE_ID, templateParams)
+
+      setSubscriptionStatus("success")
+      setEmail("") // Clear the input
+
+      // Reset status after 3 seconds
+      setTimeout(() => {
+        setSubscriptionStatus("idle")
+      }, 3000)
+    } catch (error) {
+      console.error("Error subscribing to newsletter:", error)
+      setSubscriptionStatus("error")
+      setErrorMessage("Failed to subscribe. Please try again.")
+
+      // Reset error status after 3 seconds
+      setTimeout(() => {
+        setSubscriptionStatus("idle")
+        setErrorMessage("")
+      }, 3000)
+    }
+  }
+
   return (
     <footer className="bg-gray-900 text-gray-200">
       <div className="container px-4 md:px-6 py-12 md:py-16">
@@ -57,8 +110,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-gray-400 hover:text-white text-sm">
-                  Partners
+                <Link href="/solutions" className="text-gray-400 hover:text-white text-sm">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/manufacturing" className="text-gray-400 hover:text-white text-sm">
+                  Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link href="/certifications" className="text-gray-400 hover:text-white text-sm">
+                  Certifications
                 </Link>
               </li>
               <li>
@@ -77,7 +140,7 @@ export default function Footer() {
                 <strong className="text-white">Phone:</strong> +234 8033441242
               </p>
               <p>
-                <strong className="text-white">Email:</strong> info@unistar-hitech.com
+                <strong className="text-white">Email:</strong> iinfounistar@gmail.com
               </p>
             </address>
           </div>
@@ -86,9 +149,47 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-4">
               Subscribe to our newsletter for the latest updates and industry insights.
             </p>
-            <form className="space-y-2">
-              <Input type="email" placeholder="Your email address" className="bg-gray-800 border-gray-700 text-white" />
-              <Button className="w-full">Subscribe</Button>
+            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-400"
+                required
+                disabled={subscriptionStatus === "submitting" || subscriptionStatus === "success"}
+              />
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={subscriptionStatus === "submitting" || subscriptionStatus === "success"}
+              >
+                {subscriptionStatus === "idle" && "Subscribe"}
+                {subscriptionStatus === "submitting" && (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Subscribing...
+                  </>
+                )}
+                {subscriptionStatus === "success" && (
+                  <>
+                    <CheckCircle className="mr-2 h-4 w-4" />
+                    Subscribed!
+                  </>
+                )}
+                {subscriptionStatus === "error" && "Try Again"}
+              </Button>
+
+              {subscriptionStatus === "success" && (
+                <div className="text-green-400 text-xs text-center">Thank you for subscribing to our newsletter!</div>
+              )}
+
+              {subscriptionStatus === "error" && (
+                <div className="text-red-400 text-xs text-center flex items-center justify-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {errorMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>
