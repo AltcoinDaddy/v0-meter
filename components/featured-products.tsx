@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/vCYQgG2p/meter.png"
+                        src="https://i.ibb.co/HDWyH6W4/single-face.png"
                         alt="Prepaid Electricity Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
@@ -85,7 +85,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/vCYQgG2p/meter.png"
+                        src="https://i.ibb.co/HDWyH6W4/single-face.png"
                         alt="Split Prepayment Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}
@@ -125,7 +125,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/vCYQgG2p/meter.png"
+                        src="https://i.ibb.co/HDWyH6W4/single-face.png"
                         alt="Keypad Prepayment Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}

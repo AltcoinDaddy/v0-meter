@@ -40,19 +40,17 @@ export default function PartnersSection() {
                 description: "Port Harcourt Electricity Distribution Company",
                 image: "https://i.ibb.co/d0NNnH8C/image.png",
               },
-                 {
+              {
                 name: "JEDC",
                 description: "Jos Electricity Distribution Company",
                 image: "https://i.ibb.co/JWmmP9fn/qq-Sdt2-Ir-400x400.png",
               },
-
-                 {
+              {
                 name: "BEDC",
                 description: "Benin Electricity Distribution Company",
                 image: "https://i.ibb.co/SD8ZsQ7j/1630523181566.png",
               },
-              
-                 {
+              {
                 name: "IE",
                 description: "Ikeja Electric",
                 image: "https://i.ibb.co/60Vw3Tyz/download.png",
@@ -80,7 +78,7 @@ export default function PartnersSection() {
         {/* Government Partners */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Government & Regulatory Partners</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               {
                 name: "NERC",
@@ -96,6 +94,11 @@ export default function PartnersSection() {
                 name: "FMoP",
                 description: "Federal Ministry of Power",
                 image: "https://i.ibb.co/whZZwjRQ/image.png",
+              },
+              {
+                name: "NEMSA",
+                description: "Nigerian Electricity Management Services Agency",
+                image: "https://i.ibb.co/TMBn5QLq/download.jpg",
               },
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">

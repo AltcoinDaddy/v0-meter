@@ -102,7 +102,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-gray-500">+234 8033441242</p>
-                    <p className="text-gray-500">+234 8129901942</p>
+                    <p className="text-gray-500"><br></p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -111,7 +111,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-gray-500">iinfounistar@gmail.com</p>
+                    <p className="text-gray-500">info@unistarhi-tech.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -52,7 +52,7 @@ export default function ProductsPage() {
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
                   <img
-                    src="https://i.ibb.co/vCYQgG2p/meter.png"
+                    src="https://i.ibb.co/HDWyH6W4/single-face.png"
                     alt="Single-Phase Meters"
                     className="object-cover w-full h-full"
                   />
@@ -180,7 +180,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 5(80)A, 10(100)A
+                      <span className="font-medium">Current Rating:</span> 10(100)A, 5(100)A
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -215,7 +215,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 10(100)A, 20(120)A
+                      <span className="font-medium">Current Rating:</span> 10(100)A, 20(120)A, 5(100)A
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -250,7 +250,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 5(80)A, 5(100)A
+                      <span className="font-medium">Current Rating:</span> 5(100)A, 5(100)A
                     </div>
                   </li>
                   <li className="flex items-start">
@@ -285,7 +285,7 @@ export default function ProductsPage() {
                   <li className="flex items-start">
                     <Check className="mr-2 h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <span className="font-medium">Current Rating:</span> 5(60)A, 10(80)A, 10(100)A
+                      <span className="font-medium">Current Rating:</span> 5(60)A, 10(100)A 5(100)A
                     </div>
                   </li>
                   <li className="flex items-start">

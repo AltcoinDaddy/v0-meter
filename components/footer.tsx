@@ -139,8 +139,8 @@ export default function Footer() {
               <p className="pt-2">
                 <strong className="text-white">Phone:</strong> +234 8033441242
               </p>
-              <p>
-                <strong className="text-white">Email:</strong> iinfounistar@gmail.com
+              <p className="">
+                <strong className="text-white">Email:</strong> info@unistarhi-tech.com
               </p>
             </address>
           </div>
