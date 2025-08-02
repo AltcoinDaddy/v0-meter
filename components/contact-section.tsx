@@ -102,7 +102,6 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-gray-500">+234 8033441242</p>
-                    <p className="text-gray-500"><br></p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

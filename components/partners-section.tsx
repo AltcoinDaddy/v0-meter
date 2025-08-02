@@ -1,74 +1,83 @@
-import { Card, CardContent } from "@/components/ui/card"
+"use client"
+
 import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function PartnersSection() {
+  const internationalPartners = [
+    {
+      name: "Hexing Electrical",
+      description: "Leading Chinese manufacturer of smart meters and energy management solutions",
+      logo: "/placeholder.svg?height=80&width=120&text=Hexing",
+    },
+    {
+      name: "Secure Meters",
+      description: "UK-based provider of advanced metering infrastructure and smart grid solutions",
+      logo: "/placeholder.svg?height=80&width=120&text=Secure+Meters",
+    },
+    {
+      name: "Conlog",
+      description: "South African technology company specializing in prepayment metering systems",
+      logo: "/placeholder.svg?height=80&width=120&text=Conlog",
+    },
+  ]
+
+  const governmentPartners = [
+    {
+      name: "NERC",
+      description: "Nigerian Electricity Regulatory Commission",
+      logo: "/placeholder.svg?height=80&width=120&text=NERC",
+    },
+    {
+      name: "SON",
+      description: "Standards Organisation of Nigeria",
+      logo: "/placeholder.svg?height=80&width=120&text=SON",
+    },
+    {
+      name: "SON",
+      description: "Standards Organisation of Nigeria",
+      logo: "/placeholder.svg?height=80&width=120&text=SON",
+    },
+    {
+      name: "NEMSA",
+      description: "Nigerian Electricity Management Services Agency",
+      logo: "/placeholder.svg?height=80&width=120&text=NEMSA",
+    },
+  ]
+
   return (
-    <section id="partners" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Strategic Partners</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Strategic Partnerships</h2>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Collaborating with industry leaders to deliver the best metering solutions for Nigeria&apos;s energy
-              sector.
+              Our strong partnerships with international technology providers and regulatory bodies ensure we deliver
+              world-class solutions that meet Nigerian standards.
             </p>
           </div>
         </div>
 
-        {/* Distribution Partners */}
+        {/* International Partners */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8">Distribution Partners</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              {
-                name: "EKEDC",
-                description: "Eko Electricity Distribution Company",
-                image: "https://i.ibb.co/NdS84JJh/image.png",
-              },
-              {
-                name: "AEDC",
-                description: "Abuja Electricity Distribution Company",
-                image: "https://i.ibb.co/0yYSfqTm/image.png",
-              },
-              {
-                name: "IBEDC",
-                description: "Ibadan Electricity Distribution Company",
-                image: "https://i.ibb.co/s9VFvVdr/image.png",
-              },
-              {
-                name: "PHED",
-                description: "Port Harcourt Electricity Distribution Company",
-                image: "https://i.ibb.co/d0NNnH8C/image.png",
-              },
-              {
-                name: "JEDC",
-                description: "Jos Electricity Distribution Company",
-                image: "https://i.ibb.co/JWmmP9fn/qq-Sdt2-Ir-400x400.png",
-              },
-              {
-                name: "BEDC",
-                description: "Benin Electricity Distribution Company",
-                image: "https://i.ibb.co/SD8ZsQ7j/1630523181566.png",
-              },
-              {
-                name: "IE",
-                description: "Ikeja Electric",
-                image: "https://i.ibb.co/60Vw3Tyz/download.png",
-              },
-            ].map((partner, index) => (
-              <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="h-20 flex items-center justify-center mb-4">
+          <h3 className="text-2xl font-bold text-center mb-8">International Technology Partners</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {internationalPartners.map((partner, index) => (
+              <Card key={index} className="bg-gray-50 border-0 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <div className="w-32 h-20 bg-white rounded-lg flex items-center justify-center shadow-sm">
                     <Image
-                      src={partner.image || "/placeholder.svg"}
-                      alt={`${partner.name} Logo`}
-                      width={200}
-                      height={120}
-                      className="max-h-20 w-auto object-contain"
+                      src={partner.logo || "/placeholder.svg"}
+                      alt={`${partner.name} logo`}
+                      width={120}
+                      height={80}
+                      className="object-contain"
                     />
                   </div>
-                  <h4 className="font-semibold">{partner.name}</h4>
-                  <p className="text-xs text-gray-500">{partner.description}</p>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">{partner.name}</h4>
+                    <p className="text-gray-500 text-sm">{partner.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -79,44 +88,62 @@ export default function PartnersSection() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Government & Regulatory Partners</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              {
-                name: "NERC",
-                description: "Nigerian Electricity Regulatory Commission",
-                image: "https://i.ibb.co/8nzCFCxv/image.png",
-              },
-              {
-                name: "SON",
-                description: "Standards Organisation of Nigeria",
-                image: "https://i.ibb.co/6R76635z/image.png",
-              },
-              {
-                name: "FMoP",
-                description: "Federal Ministry of Power",
-                image: "https://i.ibb.co/whZZwjRQ/image.png",
-              },
-              {
-                name: "NEMSA",
-                description: "Nigerian Electricity Management Services Agency",
-                image: "https://i.ibb.co/TMBn5QLq/download.jpg",
-              },
-            ].map((partner, index) => (
-              <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="h-20 flex items-center justify-center mb-4">
+            {governmentPartners.map((partner, index) => (
+              <Card key={index} className="bg-gray-50 border-0 shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+                  <div className="w-24 h-16 bg-white rounded-lg flex items-center justify-center shadow-sm">
                     <Image
-                      src={partner.image || "/placeholder.svg"}
-                      alt={`${partner.name} Logo`}
-                      width={200}
-                      height={120}
-                      className="max-h-20 w-auto object-contain"
+                      src={partner.logo || "/placeholder.svg"}
+                      alt={`${partner.name} logo`}
+                      width={120}
+                      height={80}
+                      className="object-contain"
                     />
                   </div>
-                  <h4 className="font-semibold">{partner.name}</h4>
-                  <p className="text-xs text-gray-500">{partner.description}</p>
+                  <div>
+                    <h4 className="text-lg font-bold mb-1">{partner.name}</h4>
+                    <p className="text-gray-500 text-xs">{partner.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Partnership Benefits */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-8">Partnership Benefits</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-bold mb-2">Technology Transfer</h4>
+                <p className="text-gray-600 text-sm">
+                  Access to cutting-edge metering technologies and manufacturing processes
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-bold mb-2">Quality Assurance</h4>
+                <p className="text-gray-600 text-sm">
+                  International quality standards and continuous improvement processes
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-bold mb-2">Regulatory Compliance</h4>
+                <p className="text-gray-600 text-sm">
+                  Full compliance with Nigerian electricity sector regulations and standards
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-bold mb-2">Local Support</h4>
+                <p className="text-gray-600 text-sm">Comprehensive local technical support and maintenance services</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
