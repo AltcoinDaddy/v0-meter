@@ -97,9 +97,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <p className="text-gray-500">
-                      +234 (0) 1 234 5678
-                      <br />
-                      +234 (0) 1 234 5679
+                      +234 8033441242                    
                     </p>
                   </div>
                 </CardContent>
@@ -111,9 +109,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <p className="text-gray-500">
-                      info@unistarmeters.com
-                      <br />
-                      sales@unistarmeters.com
+                      info@unistarhi-tech.com
                     </p>
                   </div>
                 </CardContent>
@@ -127,7 +123,7 @@ export default function ContactSection() {
                     <p className="text-gray-500">
                       Monday - Friday: 8:00 AM - 6:00 PM
                       <br />
-                      Saturday: 9:00 AM - 2:00 PM
+                      Saturday - Close
                     </p>
                   </div>
                 </CardContent>
