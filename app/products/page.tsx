@@ -98,7 +98,7 @@ export default function ProductsPage() {
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
                   <img
-                    src="/placeholder.svg?text=Split+Prepayment+Meters"
+                    src="https://i.ibb.co/vCYQgG2p/meter.png"
                     alt="Split Prepayment Meters"
                     className="object-cover w-full h-full"
                   />
@@ -121,7 +121,7 @@ export default function ProductsPage() {
               <CardHeader className="p-0">
                 <div className="relative aspect-square overflow-hidden rounded-t-lg">
                   <img
-                    src="/placeholder.svg?text=Smart+Meters"
+                    src="https://i.ibb.co/vCYQgG2p/meter.png"
                     alt="Smart Meters"
                     className="object-cover w-full h-full"
                   />

@@ -56,7 +56,7 @@ export default function StatsSection() {
                   <span className="text-xs sm:text-sm font-medium">Production Capacity</span>
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <h3 className="text-xl sm:text-3xl font-bold">250K+</h3>
+                  <h3 className="text-xl sm:text-3xl font-bold">720K+</h3>
                   <span className="text-xs sm:text-sm text-gray-500">meters annually</span>
                 </div>
               </div>
