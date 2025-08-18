@@ -40,7 +40,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-lg">Phone</h3>
                       <p className="text-gray-500">+234 8033441242</p>
-                      <p className="text-gray-500">+234 8129901942</p>
+                       
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -59,7 +59,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Office Location</h3>
-                      <p className="text-gray-500">KM 16, Ikorodu Road, Ojota,</p>
+                      <p className="text-gray-500">Plot 123, Industrial Estate
+Ikeja</p>
                       <p className="text-gray-500">Lagos, Nigeria</p>
                     </div>
                   </div>
@@ -70,7 +71,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-lg">Business Hours</h3>
                       <p className="text-gray-500">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                      <p className="text-gray-500">Sunday - Saturday: Closed</p>
+                      <p className="text-gray-500">Saturday - Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -152,22 +153,22 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-bold">What are your business hours?</h3>
                 <p className="text-gray-500 mt-2">
-                  Our offices are open Monday to Friday from 8:00 AM to 5:00 PM, and Saturday from 9:00 AM to 1:00 PM.
-                  We are closed on Sundays and public holidays.
+                  Our offices are open Monday to Friday from 8:00 AM to 5:00 PM.
                 </p>
+                  We are closed on Saturday = Sundays and public holidays.
               </div>
               <div>
                 <h3 className="text-xl font-bold">How can I request a product demonstration?</h3>
                 <p className="text-gray-500 mt-2">
                   You can request a product demonstration by filling out our contact form, calling our sales team, or
-                  sending an email to sales@unistar-hitech.com.
+                  sending an email to info@unistarhi-tech.com.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-bold">Do you offer technical support?</h3>
                 <p className="text-gray-500 mt-2">
                   Yes, we provide comprehensive technical support for all our products. You can reach our support team
-                  at support@unistar-hitech.com or call our technical support hotline at +234 123 456 7893.
+                  at info@unistarhi-tech.com or call our technical support hotline at +234 8033441242.
                 </p>
               </div>
             </div>
@@ -190,20 +191,14 @@ export default function ContactPage() {
                 <h3 className="text-xl font-bold">How can I become a distributor?</h3>
                 <p className="text-gray-500 mt-2">
                   If you're interested in becoming a distributor, please send your business profile and inquiry to
-                  partnerships@unistar-hitech.com. Our business development team will review your application and get
+                  info@unistarhi-tech.com. Our business development team will review your application and get
                   back to you.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex justify-center mt-12">
-            <Link href="/faq">
-              <Button variant="outline" className="gap-2">
-                View All FAQs <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+          
         </div>
       </section>
 

@@ -55,6 +55,13 @@ export default function PartnersSection() {
                 description: "Ikeja Electric",
                 image: "https://i.ibb.co/60Vw3Tyz/download.png",
               },
+              {
+                name: "EEDC",
+                description: "Enugu Electricity Distribution PLC - EEDC",
+                image: "https://i.ibb.co/8SVXnX0/images.png",
+              },
+
+
             ].map((partner, index) => (
               <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all">
                 <CardContent className="p-6 flex flex-col items-center text-center">

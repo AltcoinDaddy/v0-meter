@@ -16,7 +16,7 @@ export const metadata = {
     icon: "https://i.ibb.co/RkNpdNRs/LOGO.png",
     apple: "https://i.ibb.co/RkNpdNRs/LOGO.png",
   },
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

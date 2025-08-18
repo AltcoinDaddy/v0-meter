@@ -42,9 +42,7 @@ export default function NewsSection() {
             </CardContent>
             <CardFooter className="p-6 pt-0">
               <Link href="/news/facility-expansion">
-                <Button variant="ghost" className="p-0 h-auto">
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+               
               </Link>
             </CardFooter>
           </Card>
@@ -73,9 +71,7 @@ export default function NewsSection() {
             </CardContent>
             <CardFooter className="p-6 pt-0">
               <Link href="/news/next-gen-smart-meters">
-                <Button variant="ghost" className="p-0 h-auto">
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                
               </Link>
             </CardFooter>
           </Card>

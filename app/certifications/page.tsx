@@ -7,24 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog"
-import {
-  ArrowRight,
-  Download,
-  FileText,
-  Shield,
-  ShieldCheck,
-  X,
-  ChevronLeft,
-  ChevronRight,
-  Calendar,
-  Loader2,
-} from "lucide-react"
-import JSZip from "jszip"
-import FileSaver from "file-saver" // Changed from named import to default import
+import { ArrowRight, FileText, Shield, ShieldCheck, X, ChevronLeft, ChevronRight, Calendar } from "lucide-react"
 
 export default function CertificationsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isDownloading, setIsDownloading] = useState(false)
   const [selectedCertificate, setSelectedCertificate] = useState<{
     name: string
     images: Array<{
@@ -185,53 +171,6 @@ export default function CertificationsPage() {
     }
   }
 
-  const downloadAllCertificates = async () => {
-    setIsDownloading(true)
-    try {
-      const zip = new JSZip()
-      const certificatesFolder = zip.folder("Unistar-Certificates")
-
-      // Collect all unique certificate images
-      const allImages: { src: string; name: string }[] = []
-
-      certifications.forEach((cert) => {
-        cert.images.forEach((img) => {
-          const fileName = img.src.split("/").pop() || "certificate.png"
-          const certName = cert.name.replace(/\s+/g, "-").toLowerCase()
-          const caption = img.caption.replace(/\s+/g, "-").toLowerCase()
-          const uniqueName = `${certName}-${caption}`
-
-          allImages.push({
-            src: img.src,
-            name: uniqueName + "." + fileName.split(".").pop(),
-          })
-        })
-      })
-
-      // Download each image and add to zip
-      const downloadPromises = allImages.map(async (img) => {
-        try {
-          const response = await fetch(img.src)
-          const blob = await response.blob()
-          certificatesFolder?.file(img.name, blob)
-        } catch (error) {
-          console.error(`Failed to download ${img.src}:`, error)
-        }
-      })
-
-      await Promise.all(downloadPromises)
-
-      // Generate and download the zip file
-      const content = await zip.generateAsync({ type: "blob" })
-      FileSaver.saveAs(content, "Unistar-Certificates.zip") // Changed to use FileSaver.saveAs
-    } catch (error) {
-      console.error("Error creating zip file:", error)
-      alert("Failed to download certificates. Please try again later.")
-    } finally {
-      setIsDownloading(false)
-    }
-  }
-
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* Hero Section */}
@@ -276,7 +215,12 @@ export default function CertificationsPage() {
                     <h3 className="text-xl font-bold">{cert.name}</h3>
                     <p className="text-gray-500 mt-2">{cert.content}</p>
                     <div className="flex justify-center mt-4">
-                      <Button variant="outline" size="sm" className="gap-1" onClick={() => openCertificateModal(cert)}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-1 bg-transparent"
+                        onClick={() => openCertificateModal(cert)}
+                      >
                         <FileText className="h-4 w-4" /> View Certificate
                       </Button>
                     </div>
@@ -305,17 +249,6 @@ export default function CertificationsPage() {
               <Button className="gap-2">
                 <Shield className="h-4 w-4" /> Quality Policy
               </Button>
-              <Button variant="outline" className="gap-2" onClick={downloadAllCertificates} disabled={isDownloading}>
-                {isDownloading ? (
-                  <>
-                    <Loader2 className="h-4 w-4 animate-spin" /> Preparing Download...
-                  </>
-                ) : (
-                  <>
-                    <Download className="h-4 w-4" /> Download All Certificates
-                  </>
-                )}
-              </Button>
             </div>
           </div>
         </div>
@@ -341,7 +274,7 @@ export default function CertificationsPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="px-8 border-white text-white hover:text-primary hover:bg-white font-medium"
+                  className="px-8 border-white text-white hover:text-primary hover:bg-white font-medium bg-transparent"
                 >
                   View Products <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -420,9 +353,6 @@ export default function CertificationsPage() {
             <div className="mt-6 flex justify-end gap-4">
               <Button variant="outline" onClick={() => setIsModalOpen(false)}>
                 Close
-              </Button>
-              <Button className="gap-2">
-                <Download className="h-4 w-4" /> Download Certificate
               </Button>
             </div>
           </div>
