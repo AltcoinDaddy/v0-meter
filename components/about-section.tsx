@@ -40,9 +40,9 @@ export default function AboutSection() {
               meters nationwide, serving major electricity distribution companies across the country.
             </p>
             <p className="text-gray-500">
-              Our state-of-the-art manufacturing facility in Nigeria produces over 250,000 meters annually, reducing
+              Our state-of-the-art manufacturing facility in Nigeria produces over 1.2M meters annually, reducing
               import costs and delays while creating local employment opportunities. We combine global expertise through
-              our partnership with SHENZHEN DONSUN Technology with local manufacturing capabilities to deliver products
+              our partnership with WellSun Intelligent Technology Co Ltd with local manufacturing capabilities to deliver products
               tailored for the Nigerian market.
             </p>
             <div className="flex flex-col gap-2 sm:flex-row pt-4">

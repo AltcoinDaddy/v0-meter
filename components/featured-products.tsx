@@ -85,7 +85,7 @@ export default function FeaturedProducts() {
                       </div>
                     ) : (
                       <img
-                        src="https://i.ibb.co/HDWyH6W4/single-face.png"
+                        src="https://i.ibb.co/d4wbNdqp/split.jpg"
                         alt="Split Prepayment Meter"
                         className="object-contain transition-transform hover:scale-105 p-4 w-full h-full"
                         onError={() => setImgError((prev) => ({ ...prev, singlePhase: true }))}

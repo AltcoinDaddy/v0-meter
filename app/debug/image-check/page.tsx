@@ -13,7 +13,7 @@ export default function ImageCheckPage() {
             <h3 className="font-medium mb-2">/images/donsun-technology.png</h3>
             <img
               src="/images/donsun-technology.png"
-              alt="Direct reference to donsun-technology.png"
+              alt="Direct reference to -technology.png"
               className="border rounded-lg"
             />
           </div>
@@ -21,7 +21,7 @@ export default function ImageCheckPage() {
             <h3 className="font-medium mb-2">/images/partners/donsun-technology.png</h3>
             <img
               src="/images/partners/donsun-technology.png"
-              alt="Direct reference to partners/donsun-technology.png"
+              alt="Direct reference to partners/-technology.png"
               className="border rounded-lg"
             />
           </div>

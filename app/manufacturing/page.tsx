@@ -76,7 +76,7 @@ export default function ManufacturingPage() {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Factory className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold">250,000+</h3>
+                <h3 className="text-xl font-bold">1.2M+</h3>
                 <p className="text-gray-500">Meters produced annually</p>
               </CardContent>
             </Card>
@@ -163,43 +163,43 @@ export default function ManufacturingPage() {
                   title: "Design & Engineering",
                   description:
                     "Our team of engineers designs meters that meet international standards while addressing the specific needs of the Nigerian market.",
-                  image: "/placeholder.svg?key=bnq4v",
+                  image: "https://i.ibb.co/twW6RJqG/Parameterization-Kit-1.png",
                 },
                 {
                   title: "Component Sourcing",
                   description:
                     "We source high-quality components from trusted suppliers, with a focus on maximizing local content where possible.",
-                  image: "/placeholder.svg?key=vvryp",
+                  image: "https://i.ibb.co/SXcF0t9V/Assembly-Packing-Line-1.png",
                 },
                 {
                   title: "PCB Assembly",
                   description:
                     "Our automated SMT (Surface Mount Technology) lines ensure precise assembly of printed circuit boards.",
-                  image: "/placeholder.svg?key=qup55",
+                  image: "https://i.ibb.co/twW6RJqG/Parameterization-Kit-1.png",
                 },
                 {
                   title: "Meter Assembly",
                   description:
                     "Skilled technicians assemble meters with precision, ensuring all components are properly integrated.",
-                  image: "/placeholder.svg?key=124i1",
+                  image: "https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png",
                 },
                 {
                   title: "Testing & Calibration",
                   description:
                     "Every meter undergoes rigorous testing and calibration to ensure accuracy and reliability.",
-                  image: "/placeholder.svg?key=debld",
+                  image: "https://i.ibb.co/twW6RJqG/Parameterization-Kit-1.png",
                 },
                 {
                   title: "Quality Control",
                   description:
                     "Our comprehensive quality control process includes visual inspection, functional testing, and sample batch testing.",
-                  image: "/placeholder.svg?key=xyst8",
+                  image: "https://i.ibb.co/XrmBtMSx/Unistar-Hi-Tech-Systems-Corporate-Profile-15072024-14.png",
                 },
                 {
                   title: "Packaging & Distribution",
                   description:
                     "Meters are carefully packaged to prevent damage during transportation and distributed to customers across Nigeria.",
-                  image: "/placeholder.svg?key=saco4",
+                  image: "https://i.ibb.co/9xjx5Z8/Trolley-1.png",
                 },
               ].map((step, index) => (
                 <div
@@ -479,7 +479,7 @@ export default function ManufacturingPage() {
                 electronics manufacturing, quality control, and engineering.
               </p>
               <p className="text-gray-500">
-                Through our partnership with SHENZHEN DONSUN Technology, we facilitate technology transfer that builds
+                Through our partnership with WellSun Intelligent Technology Co Ltd, we facilitate technology transfer that builds
                 local capacity and expertise. This knowledge sharing helps develop Nigeria&apos;s manufacturing
                 capabilities and contributes to the country&apos;s industrial growth.
               </p>

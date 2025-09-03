@@ -37,7 +37,7 @@ export default function CertificationsPage() {
           date: "November 11, 2021",
         },
         {
-          src: "https://i.ibb.co/93kPSBkd/image.png",
+          src: "https://i.ibb.co/9k3XhXsK/STS-CERTIFICATE.png",
           caption: "STS Certificate for Three Phase Meter (DTSY111)",
           date: "November 11, 2021",
         },

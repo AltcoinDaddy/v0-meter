@@ -83,9 +83,9 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Head Office</h4>
                     <p className="text-gray-500">
-                      Plot 123, Industrial Estate
+                      KM 16, Ikorodu Road,
                       <br />
-                      Ikeja, Lagos State, Nigeria
+                      Ojota, Lagos State, Nigeria
                     </p>
                   </div>
                 </CardContent>

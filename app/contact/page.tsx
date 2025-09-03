@@ -59,8 +59,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Office Location</h3>
-                      <p className="text-gray-500">Plot 123, Industrial Estate
-Ikeja</p>
+                      <p className="text-gray-500">KM 16, Ikorodu Road, Ojota Lagos</p>
                       <p className="text-gray-500">Lagos, Nigeria</p>
                     </div>
                   </div>

@@ -67,13 +67,13 @@ export default function AboutPage() {
               <p className="text-gray-500">
                 Our journey began with a small production facility and a team of dedicated engineers committed to
                 developing metering solutions specifically designed for the Nigerian market. Through strategic
-                partnerships with international technology providers, particularly SHENZHEN DONSUN Technology, we gained
+                partnerships with international technology providers, particularly WellSun Intelligent Technology Co Ltd, we gained
                 access to cutting-edge metering technology while maintaining our focus on local manufacturing.
               </p>
               <p className="text-gray-500">
                 Over the years, we have grown to become Nigeria&apos;s leading manufacturer of electric prepaid meters,
                 with over 1.2 million meters installed nationwide. Our state-of-the-art manufacturing facility now
-                produces more than 250,000 meters annually, serving major electricity distribution companies across the
+                produces more than 1.2M meters annually, serving major electricity distribution companies across the
                 country.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <div className="p-3 rounded-full bg-primary/10">
                     <Factory className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">250K+</h3>
+                  <h3 className="text-xl font-bold">1.2M</h3>
                   <p className="text-gray-500">Annual Production</p>
                 </CardContent>
               </Card>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 {
                   year: "2023",
                   title: "Facility Expansion",
-                  description: "Expanded manufacturing capacity to over 250,000 meters annually.",
+                  description: "Expanded manufacturing capacity to over 1.2M meters annually.",
                 },
               ].map((event, index) => (
                 <div
@@ -322,7 +322,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold">Nigerian-Made Excellence</h3>
               <p className="text-gray-500">
                 Our manufacturing facility in Nigeria is equipped with cutting-edge technology and staffed by highly
-                skilled technicians and engineers. With a production capacity exceeding 250,000 meters annually, we are
+                skilled technicians and engineers. With a production capacity exceeding 1.2M meters annually, we are
                 able to meet the growing demand for electricity meters across the country.
               </p>
               <p className="text-gray-500">
@@ -334,7 +334,7 @@ export default function AboutPage() {
                 Every meter produced in our facility undergoes rigorous quality control processes to ensure compliance
                 with international standards and reliability in the field. Our manufacturing processes are certified by
                 relevant regulatory bodies, including the Standards Organisation of Nigeria (SON) and the Nigerian
-                Electricity Regulatory Commission (NERC).
+                Electricity Regulatory Commission (NERC), Nigerian Electricity Management Services Agency(NEMSA).
               </p>
               <div className="pt-4">
                 <Link href="/manufacturing">
