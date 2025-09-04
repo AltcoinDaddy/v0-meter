@@ -16,7 +16,7 @@ export const metadata = {
     icon: "https://i.ibb.co/RkNpdNRs/LOGO.png",
     apple: "https://i.ibb.co/RkNpdNRs/LOGO.png",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -26,28 +26,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* Use regular HTML link tags for favicon */}
-        <link rel="icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" sizes="any" />
-        <link rel="apple-touch-icon" href="https://i.ibb.co/RkNpdNRs/LOGO.png" />
-        {/* Add debugging script */}
-        <Script id="image-debug" strategy="afterInteractive">
-          {`
-          window.addEventListener('error', function(e) {
-            if (e.target.tagName === 'IMG') {
-              console.error('Image load error:', e.target.src);
-              e.target.style.border = '2px solid red';
-              e.target.style.padding = '5px';
-              const errorMsg = document.createElement('div');
-              errorMsg.textContent = 'Image failed to load: ' + e.target.src;
-              errorMsg.style.color = 'red';
-              errorMsg.style.fontSize = '12px';
-              e.target.parentNode.appendChild(errorMsg);
-            }
-          }, true);
-          `}
-        </Script>
-      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="min-h-screen flex flex-col">
@@ -56,6 +34,17 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+
+        {/* Safe place for custom scripts */}
+        <Script id="image-debug" strategy="afterInteractive">
+          {`
+            window.addEventListener('error', function(e) {
+              if (e.target.tagName === 'IMG') {
+                console.error('Image load error:', e.target.src);
+              }
+            }, true);
+          `}
+        </Script>
       </body>
     </html>
   )
