@@ -72,7 +72,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-500">
                 Over the years, we have grown to become Nigeria&apos;s leading manufacturer of electric prepaid meters,
-                with over 1.2 million meters installed nationwide. Our state-of-the-art manufacturing facility now
+                with over 2.6 million meters installed nationwide. Our state-of-the-art manufacturing facility now
                 produces more than 1.2M meters annually, serving major electricity distribution companies across the
                 country.
               </p>
@@ -159,8 +159,8 @@ export default function AboutPage() {
                 },
                 {
                   year: "2020",
-                  title: "1 Million Milestone",
-                  description: "Celebrated installation of 1 million meters across Nigeria.",
+                  title: "2 Million Milestone",
+                  description: "Celebrated installation of 2 million meters across Nigeria.",
                 },
                 {
                   year: "2023",
