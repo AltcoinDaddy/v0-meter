@@ -14,7 +14,7 @@ export default function StatsSection() {
                   <span className="text-xs sm:text-sm font-medium">Meters Installed</span>
                 </div>
                 <div className="flex items-baseline space-x-2">
-                  <h3 className="text-xl sm:text-3xl font-bold">1.2M+</h3>
+                  <h3 className="text-xl sm:text-3xl font-bold">2.6M+</h3>
                   <span className="text-xs sm:text-sm text-gray-500">nationwide</span>
                 </div>
               </div>

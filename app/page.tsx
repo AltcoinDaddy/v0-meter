@@ -76,7 +76,7 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold">Fully Certified</h3>
                   <p className="text-gray-500">
-                    Official certifications from all relevant regulatory bodies (NERC, SON)
+                    Official certifications from all relevant regulatory bodies (NERC, SON, NEMSA)
                   </p>
                 </CardContent>
               </Card>
@@ -95,7 +95,7 @@ export default function Home() {
                     <BarChart3 className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">Proven Track Record</h3>
-                  <p className="text-gray-500">Over 1.2 million meters installed nationwide</p>
+                  <p className="text-gray-500">Over 2.6 million meters installed nationwide</p>
                 </CardContent>
               </Card>
               <Card className="bg-white border-0 shadow-sm">

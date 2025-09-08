@@ -36,7 +36,7 @@ export default function AboutSection() {
             <h3 className="text-2xl font-bold">Our Story</h3>
             <p className="text-gray-500">
               Founded in 2003, Unistar Hi-Tech Systems Limited has grown to become Nigeria&apos;s leading manufacturer
-              of electric prepaid meters. With over two decades of experience, we have installed more than 1.2 million
+              of electric prepaid meters. With over two decades of experience, we have installed more than 2.6 million
               meters nationwide, serving major electricity distribution companies across the country.
             </p>
             <p className="text-gray-500">
