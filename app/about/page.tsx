@@ -67,7 +67,7 @@ export default function AboutPage() {
               <p className="text-gray-500">
                 Our journey began with a small production facility and a team of dedicated engineers committed to
                 developing metering solutions specifically designed for the Nigerian market. Through strategic
-                partnerships with international technology providers, particularly Zhejiang Wellun Intelligent Technology Co Ltd, we gained
+                partnerships with international technology providers, particularly Zhejiang Wellsun Intelligent Technology Co Ltd, we gained
                 access to cutting-edge metering technology while maintaining our focus on local manufacturing.
               </p>
               <p className="text-gray-500">

@@ -479,7 +479,7 @@ export default function ManufacturingPage() {
                 electronics manufacturing, quality control, and engineering.
               </p>
               <p className="text-gray-500">
-                Through our partnership with WellSun Intelligent Technology Co Ltd, we facilitate technology transfer that builds
+                Through our partnership with Zhejiang Wellsun Intelligent Technology Co Ltd, we facilitate technology transfer that builds
                 local capacity and expertise. This knowledge sharing helps develop Nigeria&apos;s manufacturing
                 capabilities and contributes to the country&apos;s industrial growth.
               </p>
